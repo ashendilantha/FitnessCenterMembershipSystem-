@@ -711,6 +711,7 @@
                         <li><a href="viewPlans.jsp">Plans</a></li>
                         <li><a href="publicTrainers.jsp">Trainers</a></li>
                         <li><a href="publicClassSchedule.jsp">Classes</a></li>
+                        <li><a href="login.jsp">Admin</a></li>
                         <li><a href="loginMember.jsp">Member Login</a></li>
                     </ul>
                 </div>
