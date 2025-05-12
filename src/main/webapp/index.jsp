@@ -456,7 +456,10 @@
                     <a class="nav-link" href="addMember.jsp"><i class="fas fa-user-plus me-1"></i> Register</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="viewPlans.jsp"><i class="fas fa-list-alt me-1"></i> Plans</a>
+                    <a class="nav-link" href="Monthly-plan-member.jsp"><i class="fas fa-list-alt me-1"></i>Monthly Plans</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Yearly-plan-member.jsp"><i class="fas fa-list-alt me-1"></i>Yearly Plans</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="publicTrainers.jsp"><i class="fas fa-users me-1"></i> Trainers</a>
@@ -708,11 +711,10 @@
                     <ul>
                         <li><a href="index.jsp">Home</a></li>
                         <li><a href="addMember.jsp">Register</a></li>
-                        <li><a href="viewPlans.jsp">Plans</a></li>
                         <li><a href="publicTrainers.jsp">Trainers</a></li>
                         <li><a href="publicClassSchedule.jsp">Classes</a></li>
                         <li><a href="login.jsp">Admin</a></li>
-                        <li><a href="loginMember.jsp">Member Login</a></li>
+                        <li><a href="loginTrainer.jsp">Trainer Login</a></li>
                     </ul>
                 </div>
             </div>
