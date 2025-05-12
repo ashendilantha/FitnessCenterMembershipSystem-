@@ -9,14 +9,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="56c48828-26ea-41c4-a6fb-c5934634aaa9" name="Changes" comment="feat: Add files">
-      <change afterPath="$PROJECT_DIR$/src/main/java/lk/sliit/fitnesscenter/fitnesscentermembershipsystem/dao/ReviewDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lk/sliit/fitnesscenter/fitnesscentermembershipsystem/model/Review.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lk/sliit/fitnesscenter/fitnesscentermembershipsystem/servlet/ReviewServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/adminReviews.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/editReview.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/submitReview.jsp" afterDir="false" />
+    <list default="true" id="56c48828-26ea-41c4-a6fb-c5934634aaa9" name="Changes" comment="feat: Add Review files">
+      <change afterPath="$PROJECT_DIR$/src/main/java/lk/sliit/fitnesscenter/fitnesscentermembershipsystem/dao/FitnessClassDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lk/sliit/fitnesscenter/fitnesscentermembershipsystem/model/FitnessClass.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lk/sliit/fitnesscenter/fitnesscentermembershipsystem/model/WeightTrainingClass.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lk/sliit/fitnesscenter/fitnesscentermembershipsystem/model/YogaClass.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lk/sliit/fitnesscenter/fitnesscentermembershipsystem/servlet/AddClassServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lk/sliit/fitnesscenter/fitnesscentermembershipsystem/servlet/DeleteClassServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lk/sliit/fitnesscenter/fitnesscentermembershipsystem/servlet/UpdateClassServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/addClass.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/editClass.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/manageClasses.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/publicClassSchedule.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/webContexts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/webContexts.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lk/sliit/fitnesscenter/fitnesscentermembershipsystem/servlet/AdminServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/sliit/fitnesscenter/fitnesscentermembershipsystem/servlet/AdminServlet.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -147,7 +154,7 @@
       <option name="presentableId" value="Default" />
       <updated>1746851580878</updated>
       <workItem from="1746851581915" duration="1718000" />
-      <workItem from="1746984361171" duration="29525000" />
+      <workItem from="1746984361171" duration="35766000" />
     </task>
     <task id="LOCAL-00001" summary="init commit">
       <option name="closed" value="true" />
@@ -181,7 +188,15 @@
       <option name="project" value="LOCAL" />
       <updated>1747051721039</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="feat: Add Review files">
+      <option name="closed" value="true" />
+      <created>1747053988983</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1747053988983</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -190,6 +205,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="init commit" />
     <MESSAGE value="feat: Add files" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: Add files" />
+    <MESSAGE value="feat: Add Review files" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: Add Review files" />
   </component>
 </project>
