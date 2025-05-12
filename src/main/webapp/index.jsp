@@ -13,14 +13,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Oswald:wght@500;700&display=swap" rel="stylesheet">
     <!-- Custom CSS -->
     <style>
+
         :root {
-            --primary-black: #0a0a0a;
-            --secondary-black: #1a1a1a;
-            --dark-gray: #2d2d2d;
-            --medium-gray: #4a4a4a;
+            --primary-black: #15171b;
+            --secondary-black: #1a1d22;
+            --dark-gray: #181c23;
+            --medium-gray: #2a2e35;
             --light-gray: #e0e0e0;
-            --accent-green: #2ecc71;
-            --accent-dark-green: #27ae60;
+            --accent-green: #1e7a53;
+            --accent-light-green: #27ef8c;
             --white: #ffffff;
         }
 
@@ -38,26 +39,32 @@
         }
 
         .navbar {
-            background-color: rgba(10, 10, 10, 0.95) !important;
+            background-color: var(--dark-gray) !important;
             border-bottom: 2px solid var(--accent-green);
-            padding: 15px 0;
+            padding: 12px 0;
             transition: all 0.3s ease;
         }
 
         .navbar.scrolled {
             padding: 10px 0;
-            background-color: var(--primary-black) !important;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+            background-color: var(--dark-gray) !important;
+            box-shadow: 0 5px 20px rgba(30, 122, 83, 0.15);
         }
 
         .navbar-brand {
+            font-family: 'Oswald', sans-serif;
             font-weight: 700;
-            font-size: 1.8rem;
-            color: var(--white) !important;
+            font-size: 2.2rem;
+            color: var(--accent-green) !important;
+            transition: color 0.3s ease;
+        }
+
+        .navbar-brand:hover {
+            color: var(--accent-light-green) !important;
         }
 
         .navbar-brand span {
-            color: var(--accent-green);
+            color: var(--accent-light-green);
         }
 
         .nav-link {
@@ -86,11 +93,11 @@
         }
 
         .nav-link:hover {
-            color: var(--accent-green) !important;
+            color: var(--accent-light-green) !important;
         }
 
         .nav-link.active {
-            color: var(--accent-green) !important;
+            color: var(--accent-light-green) !important;
         }
 
         .nav-link.active:before {
@@ -137,18 +144,19 @@
             color: var(--white);
             border: none;
             font-weight: 600;
-            padding: 12px 30px;
-            border-radius: 30px;
+            padding: 10px 32px;
+            border-radius: 0.6rem;
             text-transform: uppercase;
             letter-spacing: 1px;
-            transition: all 0.3s;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(30, 122, 83, 0.3);
         }
 
         .btn-green:hover {
-            background-color: var(--accent-dark-green);
-            transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(46, 204, 113, 0.3);
-            color: var(--white);
+            background-color: var(--accent-light-green);
+            color: var(--dark-gray);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(39, 239, 140, 0.4);
         }
 
         .btn-outline-green {
@@ -157,23 +165,24 @@
             background-color: transparent;
             font-weight: 600;
             padding: 10px 28px;
-            border-radius: 30px;
+            border-radius: 0.6rem;
             text-transform: uppercase;
             letter-spacing: 1px;
-            transition: all 0.3s;
+            transition: all 0.3s ease;
         }
 
         .btn-outline-green:hover {
             background-color: var(--accent-green);
             color: var(--white);
-            transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(46, 204, 113, 0.3);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(30, 122, 83, 0.3);
         }
 
         .section-title {
             position: relative;
             display: inline-block;
             margin-bottom: 3rem;
+            color: var(--accent-green);
         }
 
         .section-title:after {
@@ -188,17 +197,17 @@
 
         .feature-card {
             background-color: var(--secondary-black);
-            border-radius: 8px;
+            border-radius: 1.2rem;
             padding: 30px;
             height: 100%;
-            transition: all 0.4s;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
             border-left: 4px solid transparent;
         }
 
         .feature-card:hover {
-            transform: translateY(-10px);
+            transform: translateY(-5px);
             border-left: 4px solid var(--accent-green);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 12px 40px rgba(30, 122, 83, 0.2);
         }
 
         .feature-icon {
@@ -250,12 +259,19 @@
         }
 
         .testimonial-card {
-            background-color: var(--dark-gray);
-            border-radius: 8px;
+            background-color: var(--secondary-black);
+            border-radius: 1.2rem;
             padding: 25px;
             margin: 15px;
             position: relative;
             border-left: 4px solid var(--accent-green);
+            box-shadow: 0 8px 32px rgba(30, 122, 83, 0.15);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 40px rgba(30, 122, 83, 0.2);
         }
 
         .testimonial-text {
@@ -283,6 +299,7 @@
         .cta-title {
             font-size: 2.3rem;
             margin-bottom: 20px;
+            color: var(--accent-green);
         }
 
         .cta-subtitle {
@@ -300,12 +317,12 @@
         .footer-logo {
             font-size: 1.8rem;
             font-weight: 700;
-            color: var(--white);
+            color: var(--accent-green);
             margin-bottom: 20px;
         }
 
         .footer-logo span {
-            color: var(--accent-green);
+            color: var(--accent-light-green);
         }
 
         .footer-links h5 {
@@ -341,7 +358,7 @@
         }
 
         .footer-links a:hover {
-            color: var(--accent-green);
+            color: var(--accent-light-green);
             padding-left: 5px;
         }
 
@@ -349,7 +366,7 @@
             display: inline-block;
             width: 40px;
             height: 40px;
-            background-color: var(--dark-gray);
+            background-color: var(--medium-gray);
             color: var(--light-gray);
             border-radius: 50%;
             text-align: center;
@@ -373,9 +390,9 @@
 
         .trainer-card {
             background-color: var(--secondary-black);
-            border-radius: 8px;
+            border-radius: 1.2rem;
             padding: 25px;
-            transition: all 0.3s;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
             height: 100%;
             border-left: 4px solid transparent;
         }
@@ -383,7 +400,7 @@
         .trainer-card:hover {
             transform: translateY(-5px);
             border-left: 4px solid var(--accent-green);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 12px 40px rgba(30, 122, 83, 0.2);
         }
 
         .trainer-img {
@@ -483,7 +500,6 @@
             <p class="hero-subtitle">Discover a new level of fitness with our cutting-edge facilities, expert trainers, and personalized training programs designed for all fitness levels.</p>
             <div class="d-flex flex-wrap gap-3">
                 <a href="addMember.jsp" class="btn btn-green pulse-animation"><i class="fas fa-user-plus me-2"></i> JOIN NOW</a>
-                <a href="viewPlans.jsp" class="btn btn-outline-green"><i class="fas fa-info-circle me-2"></i> OUR PLANS</a>
                 <a href="publicClassSchedule.jsp" class="btn btn-outline-green"><i class="fas fa-calendar-alt me-2"></i> CLASS SCHEDULE</a>
             </div>
         </div>
@@ -554,46 +570,71 @@
 </section>
 
 <!-- Trainers Section -->
-<section class="py-5" style="background-color: var(--secondary-black);">
+<%--<section class="py-5" style="background-color: var(--secondary-black);">--%>
+<%--    <div class="container py-5">--%>
+<%--        <h2 class="section-title text-white">MEET OUR TRAINERS</h2>--%>
+<%--        <div class="row g-4">--%>
+<%--            <div class="col-lg-4 col-md-6">--%>
+<%--                <div class="trainer-card">--%>
+<%--                    <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Trainer" class="trainer-img">--%>
+<%--                    <h3 class="feature-title">MARK JOHNSON</h3>--%>
+<%--                    <p>Strength & Conditioning coach with 8 years experience helping clients build muscle and strength.</p>--%>
+<%--                    <div class="mt-3">--%>
+<%--                        <span class="badge bg-green">Strength</span>--%>
+<%--                        <span class="badge bg-green">Bodybuilding</span>--%>
+<%--                    </div>--%>
+<%--                </div>--%>
+<%--            </div>--%>
+<%--            <div class="col-lg-4 col-md-6">--%>
+<%--                <div class="trainer-card">--%>
+<%--                    <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Trainer" class="trainer-img">--%>
+<%--                    <h3 class="feature-title">LISA PARKER</h3>--%>
+<%--                    <p>Functional fitness expert specializing in mobility, agility, and overall athletic performance.</p>--%>
+<%--                    <div class="mt-3">--%>
+<%--                        <span class="badge bg-green">Functional</span>--%>
+<%--                        <span class="badge bg-green">Mobility</span>--%>
+<%--                    </div>--%>
+<%--                </div>--%>
+<%--            </div>--%>
+<%--            <div class="col-lg-4 col-md-6">--%>
+<%--                <div class="trainer-card">--%>
+<%--                    <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Trainer" class="trainer-img">--%>
+<%--                    <h3 class="feature-title">SOPHIA LEE</h3>--%>
+<%--                    <p>Yoga and Pilates instructor focused on improving flexibility, balance, and mental wellbeing.</p>--%>
+<%--                    <div class="mt-3">--%>
+<%--                        <span class="badge bg-green">Yoga</span>--%>
+<%--                        <span class="badge bg-green">Pilates</span>--%>
+<%--                    </div>--%>
+<%--                </div>--%>
+<%--            </div>--%>
+<%--        </div>--%>
+<%--        <div class="text-center mt-4">--%>
+<%--            <a href="publicTrainers.jsp" class="btn btn-outline-green">View All Trainers</a>--%>
+<%--        </div>--%>
+<%--    </div>--%>
+<%--</section>--%>
+
+<!-- Trainers Section -->
+<!-- Trainers Section -->
+<section class="py-5" style="background: radial-gradient(circle at center, #1a1a1a 0%, #0a0a0a 100%);" aria-labelledby="trainers-heading">
     <div class="container py-5">
-        <h2 class="section-title text-white">MEET OUR TRAINERS</h2>
-        <div class="row g-4">
-            <div class="col-lg-4 col-md-6">
-                <div class="trainer-card">
-                    <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Trainer" class="trainer-img">
-                    <h3 class="feature-title">MARK JOHNSON</h3>
-                    <p>Strength & Conditioning coach with 8 years experience helping clients build muscle and strength.</p>
-                    <div class="mt-3">
-                        <span class="badge bg-green">Strength</span>
-                        <span class="badge bg-green">Bodybuilding</span>
-                    </div>
+        <div class="trainer-card-container" style="max-width: 900px; margin: 0 auto; background: #1a1a1a; border-radius: 1.2rem; box-shadow: 0 8px 32px rgba(46, 204, 113, 0.15); padding: 40px 32px; transition: transform 0.3s ease, box-shadow 0.3s ease; animation: fadeIn 0.8s ease-out;">
+            <h2 class="section-title text-white text-center" id="trainers-heading" style="font-size: 2.8rem; text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); position: relative; margin-bottom: 32px; animation: fadeInDown 0.8s ease-out;">
+                MEET OUR TRAINERS
+                <span style="position: absolute; bottom: -10px; left: 50%; transform: translateX(-50%); width: 100px; height: 4px; background: linear-gradient(90deg, #2ecc71, #27ae60); border-radius: 2px;"></span>
+            </h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-10 col-md-12 text-center">
+                    <p class="text-light mb-4" style="font-size: 1.2rem; line-height: 1.7; font-weight: 400; animation: fadeInUp 0.8s ease-out 0.2s; animation-fill-mode: both;">
+                        At Pulse Gym, our team of world-class trainers is dedicated to helping you achieve your fitness goals. With expertise in strength training, yoga, functional fitness, and more, we offer personalized guidance to suit every fitness level. Join us and experience the best in fitness coaching!
+                    </p>
                 </div>
             </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="trainer-card">
-                    <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Trainer" class="trainer-img">
-                    <h3 class="feature-title">LISA PARKER</h3>
-                    <p>Functional fitness expert specializing in mobility, agility, and overall athletic performance.</p>
-                    <div class="mt-3">
-                        <span class="badge bg-green">Functional</span>
-                        <span class="badge bg-green">Mobility</span>
-                    </div>
-                </div>
+            <div class="text-center mt-4">
+                <a href="publicTrainers.jsp" class="btn btn-outline-green" style="padding: 12px 36px; font-size: 1.1rem; transition: all 0.3s ease; box-shadow: 0 4px 12px rgba(46, 204, 113, 0.3); animation: fadeInUp 0.8s ease-out 0.4s; animation-fill-mode: both;" aria-label="View all trainers">
+                    View All Trainers
+                </a>
             </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="trainer-card">
-                    <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Trainer" class="trainer-img">
-                    <h3 class="feature-title">SOPHIA LEE</h3>
-                    <p>Yoga and Pilates instructor focused on improving flexibility, balance, and mental wellbeing.</p>
-                    <div class="mt-3">
-                        <span class="badge bg-green">Yoga</span>
-                        <span class="badge bg-green">Pilates</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="text-center mt-4">
-            <a href="publicTrainers.jsp" class="btn btn-outline-green">View All Trainers</a>
         </div>
     </div>
 </section>
@@ -685,7 +726,6 @@
         <p class="cta-subtitle">Take the first step towards a healthier, stronger you with our expert guidance and support.</p>
         <div class="d-flex justify-content-center flex-wrap gap-3">
             <a href="addMember.jsp" class="btn btn-green btn-lg"><i class="fas fa-user-plus me-2"></i> JOIN NOW</a>
-            <a href="viewPlans.jsp" class="btn btn-outline-green btn-lg"><i class="fas fa-list-alt me-2"></i> VIEW PLANS</a>
             <a href="publicTrainers.jsp" class="btn btn-outline-green btn-lg"><i class="fas fa-user-tie me-2"></i> MEET TRAINERS</a>
         </div>
     </div>
@@ -711,7 +751,6 @@
                     <ul>
                         <li><a href="index.jsp">Home</a></li>
                         <li><a href="addMember.jsp">Register</a></li>
-                        <li><a href="publicTrainers.jsp">Trainers</a></li>
                         <li><a href="publicClassSchedule.jsp">Classes</a></li>
                         <li><a href="login.jsp">Admin</a></li>
                         <li><a href="loginTrainer.jsp">Trainer Login</a></li>
