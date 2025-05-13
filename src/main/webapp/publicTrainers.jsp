@@ -1,1 +1,186 @@
-<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %><%@ page import="lk.sliit.fitnesscenter.fitnesscentermembershipsystem.model.Trainer" %><%@ page import="lk.sliit.fitnesscenter.fitnesscentermembershipsystem.dao.TrainerDAO" %><%@ page import="java.util.List" %><!DOCTYPE html><html lang="en"><head>  <meta charset="UTF-8">  <title>Our Trainers | Pulse Gym</title>  <!-- Bootstrap 5 CSS -->  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">  <!-- Font Awesome for icons -->  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">  <!-- Google Fonts -->  <link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet">  <link href="https://fonts.googleapis.com/css?family=Oswald:700&display=swap" rel="stylesheet">  <style>    body {      background: #15171b;      color: #e0e0e0;      font-family: 'Poppins', sans-serif;    }    .navbar {      background: #181c23 !important;      border-bottom: 2px solid #1e7a53;    }    .navbar-brand {      font-family: 'Oswald', sans-serif;      font-size: 2rem;      color: #1e7a53 !important;    }    .navbar-nav .nav-link.active, .navbar-nav .nav-link:hover {      color: #27ef8c !important;    }    h2 {      font-family: 'Oswald', sans-serif;      color: #1e7a53;      margin-bottom: 32px;    }    .trainer-grid {      display: flex;      flex-wrap: wrap;      gap: 24px;      justify-content: center;    }    .trainer-simple-card {      background: #181c23;      border-radius: 0.75rem;      color: #e0e0e0;      box-shadow: 0 2px 8px rgba(30,122,83,0.10);      padding: 24px 16px;      text-align: center;      width: 260px;      min-width: 200px;      margin-bottom: 16px;    }    .trainer-simple-card img {      border-radius: 50%;      border: 3px solid #27ef8c;      margin-bottom: 12px;    }    .trainer-simple-card h5 {      color: #27ef8c;      font-family: 'Oswald', sans-serif;      margin-bottom: 8px;    }    .trainer-type {      font-size: 0.95em;      margin-bottom: 8px;      display: block;      color: #1e7a53;    }    .trainer-specialty {      color: #27ef8c;      font-size: 0.95em;      margin-bottom: 8px;    }    .trainer-contact {      font-size: 0.95em;      color: #b0b0b0;    }    .alert-warning {      background: #23272f;      color: #ffb347;      border: none;    }    @media (max-width: 600px) {      .trainer-grid {        flex-direction: column;        gap: 0;      }      .trainer-simple-card {        width: 100%;      }    }  </style></head><body><<!-- Navigation Bar --><nav class="navbar navbar-expand-lg navbar-dark fixed-top">  <div class="container">    <a class="navbar-brand" href="#">      PULSE<span>GYM</span>    </a>    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">      <span class="navbar-toggler-icon"></span>    </button>    <div class="collapse navbar-collapse" id="navbarNav">      <ul class="navbar-nav ms-auto">        <li class="nav-item">          <a class="nav-link active" href="index.jsp"><i class="fas fa-home me-1"></i> Home</a>        </li>        <li class="nav-item">          <a class="nav-link" href="addMember.jsp"><i class="fas fa-user-plus me-1"></i> Register</a>        </li>        <li class="nav-item">          <a class="nav-link" href="Monthly-plan-member.jsp"><i class="fas fa-list-alt me-1"></i>Monthly Plans</a>        </li>        <li class="nav-item">          <a class="nav-link" href="Yearly-plan-member.jsp"><i class="fas fa-list-alt me-1"></i>Yearly Plans</a>        </li>        <li class="nav-item">          <a class="nav-link" href="publicTrainers.jsp"><i class="fas fa-users me-1"></i> Trainers</a>        </li>        <li class="nav-item">          <a class="nav-link" href="publicClassSchedule.jsp"><i class="fas fa-calendar-alt me-1"></i> Classes</a>        </li>        <li class="nav-item">          <a class="nav-link" href="loginMember.jsp"><i class="fas fa-sign-in-alt me-1"></i> Login</a>        </li>      </ul>    </div>  </div></nav><!-- Trainers Section --><br><div class="container mt-5">  <h2 class="text-center">Our Trainers</h2>  <div class="trainer-grid">    <%      TrainerDAO trainerDAO = new TrainerDAO();      List<Trainer> trainers = trainerDAO.getAllTrainers();      if (trainers.isEmpty()) {    %>    <div class="alert alert-warning text-center w-100">      <i class="fas fa-exclamation-triangle me-2"></i>No trainers found.    </div>    <%    } else {      for (Trainer trainer : trainers) {        String specialties = trainer.getSpecialty();    %>    <div class="trainer-simple-card">      <img src="https://ui-avatars.com/api/?name=<%= trainer.getName() %>&background=27ef8c&color=181c23&size=90"           alt="<%= trainer.getName() %>" width="90" height="90">      <h5><%= trainer.getName() %></h5>      <span class="trainer-type">                <% if (trainer instanceof lk.sliit.fitnesscenter.fitnesscentermembershipsystem.model.FullTimeTrainer) { %>                    Full-Time Trainer                <% } else { %>                    Part-Time Trainer                <% } %>            </span>      <div class="trainer-specialty">        <i class="fas fa-dumbbell me-1"></i>        <%= specialties %>      </div>      <div class="trainer-contact">        <div><i class="fas fa-envelope me-1"></i> <%= trainer.getEmail() %></div>        <div><i class="fas fa-phone me-1"></i> <%= trainer.getContactNumber() %></div>      </div>    </div>    <%        }      }    %>  </div></div><!-- Bootstrap 5 JS --><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script></body></html>
+<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ page import="lk.sliit.fitnesscenter.fitnesscentermembershipsystem.model.Trainer" %>
+<%@ page import="lk.sliit.fitnesscenter.fitnesscentermembershipsystem.dao.TrainerDAO" %>
+<%@ page import="java.util.List" %>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Our Trainers | Pulse Gym</title>
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Oswald:700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background: #15171b;
+      color: #e0e0e0;
+      font-family: 'Poppins', sans-serif;
+    }
+    .navbar {
+      background: #181c23 !important;
+      border-bottom: 2px solid #1e7a53;
+    }
+    .navbar-brand {
+      font-family: 'Oswald', sans-serif;
+      font-size: 2rem;
+      color: #1e7a53 !important;
+    }
+    .navbar-nav .nav-link.active, .navbar-nav .nav-link:hover {
+      color: #27ef8c !important;
+    }
+    h2 {
+      font-family: 'Oswald', sans-serif;
+      color: #1e7a53;
+      margin-bottom: 32px;
+    }
+    .trainer-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
+      justify-content: center;
+    }
+    .trainer-simple-card {
+      background: #181c23;
+      border-radius: 0.75rem;
+      color: #e0e0e0;
+      box-shadow: 0 2px 8px rgba(30,122,83,0.10);
+      padding: 24px 16px;
+      text-align: center;
+      width: 260px;
+      min-width: 200px;
+      margin-bottom: 16px;
+    }
+    .trainer-simple-card img {
+      border-radius: 50%;
+      border: 3px solid #27ef8c;
+      margin-bottom: 12px;
+    }
+    .trainer-simple-card h5 {
+      color: #27ef8c;
+      font-family: 'Oswald', sans-serif;
+      margin-bottom: 8px;
+    }
+    .trainer-type {
+      font-size: 0.95em;
+      margin-bottom: 8px;
+      display: block;
+      color: #1e7a53;
+    }
+    .trainer-specialty {
+      color: #27ef8c;
+      font-size: 0.95em;
+      margin-bottom: 8px;
+    }
+    .trainer-contact {
+      font-size: 0.95em;
+      color: #b0b0b0;
+    }
+    .alert-warning {
+      background: #23272f;
+      color: #ffb347;
+      border: none;
+    }
+    @media (max-width: 600px) {
+      .trainer-grid {
+        flex-direction: column;
+        gap: 0;
+      }
+      .trainer-simple-card {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<<!-- Navigation Bar -->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="#">
+      PULSE<span>GYM</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link active" href="index.jsp"><i class="fas fa-home me-1"></i> Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="addMember.jsp"><i class="fas fa-user-plus me-1"></i> Register</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="Monthly-plan-member.jsp"><i class="fas fa-list-alt me-1"></i>Monthly Plans</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="Yearly-plan-member.jsp"><i class="fas fa-list-alt me-1"></i>Yearly Plans</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="publicTrainers.jsp"><i class="fas fa-users me-1"></i> Trainers</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="publicClassSchedule.jsp"><i class="fas fa-calendar-alt me-1"></i> Classes</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="loginMember.jsp"><i class="fas fa-sign-in-alt me-1"></i> Login</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Trainers Section -->
+<br>
+<div class="container mt-5">
+  <h2 class="text-center">Our Trainers</h2>
+  <div class="trainer-grid">
+    <%
+      TrainerDAO trainerDAO = new TrainerDAO();
+      List<Trainer> trainers = trainerDAO.getAllTrainers();
+
+      if (trainers.isEmpty()) {
+    %>
+    <div class="alert alert-warning text-center w-100">
+      <i class="fas fa-exclamation-triangle me-2"></i>No trainers found.
+    </div>
+    <%
+    } else {
+      for (Trainer trainer : trainers) {
+        String specialties = trainer.getSpecialty();
+    %>
+    <div class="trainer-simple-card">
+      <img src="https://ui-avatars.com/api/?name=<%= trainer.getName() %>&background=27ef8c&color=181c23&size=90"
+           alt="<%= trainer.getName() %>" width="90" height="90">
+      <h5><%= trainer.getName() %></h5>
+      <span class="trainer-type">
+                <% if (trainer instanceof lk.sliit.fitnesscenter.fitnesscentermembershipsystem.model.FullTimeTrainer) { %>
+                    Full-Time Trainer
+                <% } else { %>
+                    Part-Time Trainer
+                <% } %>
+            </span>
+      <div class="trainer-specialty">
+        <i class="fas fa-dumbbell me-1"></i>
+        <%= specialties %>
+      </div>
+      <div class="trainer-contact">
+        <div><i class="fas fa-envelope me-1"></i> <%= trainer.getEmail() %></div>
+        <div><i class="fas fa-phone me-1"></i> <%= trainer.getContactNumber() %></div>
+      </div>
+    </div>
+    <%
+        }
+      }
+    %>
+  </div>
+</div>
+
+<!-- Bootstrap 5 JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
