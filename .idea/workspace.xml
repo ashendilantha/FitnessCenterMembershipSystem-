@@ -10,68 +10,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="56c48828-26ea-41c4-a6fb-c5934634aaa9" name="Changes" comment="update all files">
-      <change beforePath="$PROJECT_DIR$/.idea/webContexts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/webContexts.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/sliit/fitnesscenter/fitnesscentermembershipsystem/dao/FitnessClassDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/sliit/fitnesscenter/fitnesscentermembershipsystem/dao/FitnessClassDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/sliit/fitnesscenter/fitnesscentermembershipsystem/dao/MemberDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/sliit/fitnesscenter/fitnesscentermembershipsystem/dao/MemberDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/sliit/fitnesscenter/fitnesscentermembershipsystem/dao/PaymentDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/sliit/fitnesscenter/fitnesscentermembershipsystem/dao/PaymentDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/sliit/fitnesscenter/fitnesscentermembershipsystem/dao/ReviewDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/sliit/fitnesscenter/fitnesscentermembershipsystem/dao/ReviewDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/sliit/fitnesscenter/fitnesscentermembershipsystem/dao/TrainerDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/sliit/fitnesscenter/fitnesscentermembershipsystem/dao/TrainerDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/sliit/fitnesscenter/fitnesscentermembershipsystem/model/CashPayment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/sliit/fitnesscenter/fitnesscentermembershipsystem/model/CashPayment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/sliit/fitnesscenter/fitnesscentermembershipsystem/model/CreditCardPayment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/sliit/fitnesscenter/fitnesscentermembershipsystem/model/CreditCardPayment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/sliit/fitnesscenter/fitnesscentermembershipsystem/model/FitnessClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/sliit/fitnesscenter/fitnesscentermembershipsystem/model/FitnessClass.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/sliit/fitnesscenter/fitnesscentermembershipsystem/model/FullTimeTrainer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/sliit/fitnesscenter/fitnesscentermembershipsystem/model/FullTimeTrainer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/sliit/fitnesscenter/fitnesscentermembershipsystem/model/Member.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/sliit/fitnesscenter/fitnesscentermembershipsystem/model/Member.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/sliit/fitnesscenter/fitnesscentermembershipsystem/model/PartTimeTrainer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/sliit/fitnesscenter/fitnesscentermembershipsystem/model/PartTimeTrainer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/sliit/fitnesscenter/fitnesscentermembershipsystem/model/Payment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/sliit/fitnesscenter/fitnesscentermembershipsystem/model/Payment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/sliit/fitnesscenter/fitnesscentermembershipsystem/model/Review.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/sliit/fitnesscenter/fitnesscentermembershipsystem/model/Review.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/sliit/fitnesscenter/fitnesscentermembershipsystem/model/Trainer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/sliit/fitnesscenter/fitnesscentermembershipsystem/model/Trainer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/sliit/fitnesscenter/fitnesscentermembershipsystem/model/WeightTrainingClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/sliit/fitnesscenter/fitnesscentermembershipsystem/model/WeightTrainingClass.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/sliit/fitnesscenter/fitnesscentermembershipsystem/model/YogaClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/sliit/fitnesscenter/fitnesscentermembershipsystem/model/YogaClass.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/sliit/fitnesscenter/fitnesscentermembershipsystem/servlet/AddClassServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/sliit/fitnesscenter/fitnesscentermembershipsystem/servlet/AddClassServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/sliit/fitnesscenter/fitnesscentermembershipsystem/servlet/AddTrainerServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/sliit/fitnesscenter/fitnesscentermembershipsystem/servlet/AddTrainerServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/sliit/fitnesscenter/fitnesscentermembershipsystem/servlet/AdminServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/sliit/fitnesscenter/fitnesscentermembershipsystem/servlet/AdminServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/sliit/fitnesscenter/fitnesscentermembershipsystem/servlet/DeleteClassServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/sliit/fitnesscenter/fitnesscentermembershipsystem/servlet/DeleteClassServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/sliit/fitnesscenter/fitnesscentermembershipsystem/servlet/DeleteTrainerServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/sliit/fitnesscenter/fitnesscentermembershipsystem/servlet/DeleteTrainerServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/sliit/fitnesscenter/fitnesscentermembershipsystem/servlet/LoginServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/sliit/fitnesscenter/fitnesscentermembershipsystem/servlet/LoginServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/sliit/fitnesscenter/fitnesscentermembershipsystem/servlet/MemberLoginServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/sliit/fitnesscenter/fitnesscentermembershipsystem/servlet/MemberLoginServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/sliit/fitnesscenter/fitnesscentermembershipsystem/servlet/MemberLogoutServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/sliit/fitnesscenter/fitnesscentermembershipsystem/servlet/MemberLogoutServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/sliit/fitnesscenter/fitnesscentermembershipsystem/servlet/MemberServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/sliit/fitnesscenter/fitnesscentermembershipsystem/servlet/MemberServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/sliit/fitnesscenter/fitnesscentermembershipsystem/servlet/PaymentServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/sliit/fitnesscenter/fitnesscentermembershipsystem/servlet/PaymentServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/sliit/fitnesscenter/fitnesscentermembershipsystem/servlet/ReviewServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/sliit/fitnesscenter/fitnesscentermembershipsystem/servlet/ReviewServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/sliit/fitnesscenter/fitnesscentermembershipsystem/servlet/TrainerLoginServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/sliit/fitnesscenter/fitnesscentermembershipsystem/servlet/TrainerLoginServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/sliit/fitnesscenter/fitnesscentermembershipsystem/servlet/TrainerLogoutServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/sliit/fitnesscenter/fitnesscentermembershipsystem/servlet/TrainerLogoutServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/sliit/fitnesscenter/fitnesscentermembershipsystem/servlet/UpdateClassServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/sliit/fitnesscenter/fitnesscentermembershipsystem/servlet/UpdateClassServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/sliit/fitnesscenter/fitnesscentermembershipsystem/servlet/UpdateMemberServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/sliit/fitnesscenter/fitnesscentermembershipsystem/servlet/UpdateMemberServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/sliit/fitnesscenter/fitnesscentermembershipsystem/servlet/UpdateTrainerServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/sliit/fitnesscenter/fitnesscentermembershipsystem/servlet/UpdateTrainerServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lk/sliit/fitnesscenter/fitnesscentermembershipsystem/dao/monthlyPlanDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/sliit/fitnesscenter/fitnesscentermembershipsystem/dao/monthlyPlanDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lk/sliit/fitnesscenter/fitnesscentermembershipsystem/model/monthlyPlans.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/sliit/fitnesscenter/fitnesscentermembershipsystem/model/monthlyPlans.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lk/sliit/fitnesscenter/fitnesscentermembershipsystem/servlet/monthlyPlanServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/sliit/fitnesscenter/fitnesscentermembershipsystem/servlet/monthlyPlanServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/Monthly-plan-admin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Monthly-plan-admin.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/Yearly-plan-member.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Yearly-plan-member.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/add-Monthly-plan.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/add-Monthly-plan.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/add-yearly-plan.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/add-yearly-plan.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/addClass.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/addClass.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/addMember.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/addMember.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/addTrainer.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/addTrainer.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/adminDashboard.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/adminDashboard.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/adminReviews.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/adminReviews.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/edit-Monthly-plan.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/edit-Monthly-plan.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/edit-yearly-plan.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/edit-yearly-plan.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/editClass.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/editClass.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/editTrainer.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/editTrainer.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/invoiceHistory.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/invoiceHistory.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/loginMember.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/loginMember.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/loginTrainer.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/loginTrainer.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/manageClasses.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/manageClasses.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/memberProfile.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/memberProfile.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/paymentConfirmation.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/paymentConfirmation.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/paymentProcessing.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/paymentProcessing.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/publicClassSchedule.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/publicClassSchedule.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/publicTrainers.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/publicTrainers.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/submitReview.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/submitReview.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/success.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/success.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/trainerList.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/trainerList.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/trainerProfile.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/trainerProfile.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/viewMembers.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/viewMembers.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,7 +31,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="dev" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -224,7 +166,7 @@
       <option name="presentableId" value="Default" />
       <updated>1746851580878</updated>
       <workItem from="1746851581915" duration="1718000" />
-      <workItem from="1746984361171" duration="58055000" />
+      <workItem from="1746984361171" duration="60367000" />
     </task>
     <task id="LOCAL-00001" summary="init commit">
       <option name="closed" value="true" />
@@ -290,7 +232,15 @@
       <option name="project" value="LOCAL" />
       <updated>1747090419020</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="update all files">
+      <option name="closed" value="true" />
+      <created>1747117992034</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1747117992034</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

@@ -1,11 +1,13 @@
 package lk.sliit.fitnesscenter.fitnesscentermembershipsystem.servlet;
 
-
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
+import lk.sliit.fitnesscenter.fitnesscentermembershipsystem.dao.monthlyPlanDAO;
+import lk.sliit.fitnesscenter.fitnesscentermembershipsystem.model.monthlyPlans;
 
 import java.io.*;
 import java.util.ArrayList;
@@ -13,19 +15,25 @@ import java.util.List;
 
 @WebServlet("/monthlyPlanServlet")
 public class monthlyPlanServlet extends HttpServlet {
-    private static final String DIRECTORY = System.getProperty("user.home") + "/Hansana";
-    private static final String DATA_FILE = DIRECTORY + "/monthly-plan.txt";
+    private monthlyPlanDAO planDAO = new monthlyPlanDAO();
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String action = request.getParameter("action");
+        HttpSession session = request.getSession();
 
         if("addMonthlyplan".equals(action)) {
-            addMonthlyplan(request,response);
+            addMonthlyplan(request, response);
         }
         else if("deleteMonthlyplan".equals(action)) {
-            deleteMonthlyplan(request,response);
-        } else if ("updateMonthlyplan".equals(action)) {
-            updateMonthlyplan(request,response);
+            deleteMonthlyplan(request, response);
+        }
+        else if ("updateMonthlyplan".equals(action)) {
+            updateMonthlyplan(request, response);
+        }
+        else if ("sortPlans".equals(action)) {
+            planDAO.sortPlansUsingInsertionSort();
+            session.setAttribute("message", "Plans sorted successfully by ID");
+            response.sendRedirect("Monthly-plan-admin.jsp");
         }
     }
 
@@ -40,21 +48,15 @@ public class monthlyPlanServlet extends HttpServlet {
             return;
         }
 
-        // Create directory if it doesn't exist
-        new File(DIRECTORY).mkdirs();
-
-        try(BufferedWriter writer = new BufferedWriter(new FileWriter(DATA_FILE,true))) {
-            writer.write(id + "," + name + "," + price + "," + note);
-            writer.newLine();
-        }
+        monthlyPlans plan = new monthlyPlans(id, name, price, note);
+        planDAO.addMonthlyplan(plan);
         response.sendRedirect("Monthly-plan-admin.jsp");
     }
 
     private void deleteMonthlyplan(HttpServletRequest request, HttpServletResponse response) throws IOException {
         String idToDelete = request.getParameter("planId");
-
-        File inputFile = new File(DATA_FILE);
-        File tempFile = new File(DIRECTORY + "\\temp_monthly-plan.txt");
+        File inputFile = new File(planDAO.getDataFilePath());
+        File tempFile = new File(planDAO.getDirectoryPath() + "\\temp_monthly-plan.txt");
 
         List<String> lines = new ArrayList<>();
 
@@ -91,34 +93,8 @@ public class monthlyPlanServlet extends HttpServlet {
             return;
         }
 
-        File inputFile = new File(DATA_FILE);
-        File tempFile = new File(DIRECTORY + "\\temp_monthly-plan.txt");
-
-        List<String> lines = new ArrayList<>();
-
-        try(BufferedReader reader = new BufferedReader(new FileReader(inputFile))) {
-            String line;
-            while((line = reader.readLine()) != null) {
-                if(line.startsWith(originalID + ",")) {
-                    line = id + "," + name + "," + price + "," + note;
-
-                }
-
-                lines.add(line);
-
-
-            }
-        }
-
-        try(BufferedWriter writer = new BufferedWriter(new FileWriter(tempFile))) {
-            for(String line : lines) {
-                writer.write(line);
-                writer.newLine();
-            }
-        }
-
-        inputFile.delete();
-        tempFile.renameTo(inputFile);
+        monthlyPlans updatedPlan = new monthlyPlans(id, name, price, note);
+        planDAO.updateMonthlyplan(originalID, updatedPlan);
         response.sendRedirect("Monthly-plan-admin.jsp");
     }
 }

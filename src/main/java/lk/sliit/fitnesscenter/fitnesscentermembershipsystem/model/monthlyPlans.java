@@ -1,6 +1,6 @@
 package lk.sliit.fitnesscenter.fitnesscentermembershipsystem.model;
 
-public class monthlyPlans {
+public class monthlyPlans implements Comparable<monthlyPlans> {
     private String planId;
     private String planName;
     private String price;
@@ -45,8 +45,13 @@ public class monthlyPlans {
         this.notes = notes;
     }
 
-    public void display()
-    {
-        System.out.println("Plan ID: " + planId+"Plan Name: " + planName+"Plan Price: " + price+"Plan notes: " + notes);
+    @Override
+    public int compareTo(monthlyPlans other) {
+        return this.planId.compareTo(other.planId);
+    }
+
+    public void display() {
+        System.out.println("Plan ID: " + planId + " | Plan Name: " + planName +
+                " | Price: " + price + " | Notes: " + notes);
     }
 }

@@ -3,14 +3,10 @@ package lk.sliit.fitnesscenter.fitnesscentermembershipsystem.dao;
 import lk.sliit.fitnesscenter.fitnesscentermembershipsystem.model.monthlyPlans;
 
 import java.io.*;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 public class monthlyPlanDAO {
     private List<monthlyPlans> monthlyPlanList;
-//    private static final String DIRECTORY = "C:\\Users\\yuthi\\Desktop\\Add Member plans\\Plan.info";
-//    private static final String DATA_FILE = DIRECTORY + "\\monthly-plan.txt";
-
     private static final String DIRECTORY = System.getProperty("user.home") + "/Hansana";
     private static final String DATA_FILE = DIRECTORY + "/monthly-plan.txt";
 
@@ -51,7 +47,8 @@ public class monthlyPlanDAO {
             while ((line = reader.readLine()) != null) {
                 String[] data = line.split(",");
                 if(data.length == 4) {
-                    monthlyPlanList.add(new monthlyPlans(data[0], data[1], data[2], data[3]));
+                    monthlyPlans plan = new monthlyPlans(data[0], data[1], data[2], data[3]);
+                    monthlyPlanList.add(plan);
                 }
             }
         } catch (IOException e) {
@@ -68,7 +65,7 @@ public class monthlyPlanDAO {
             if(monthlyPlanList.get(i).getPlanId().equals(originalID)) {
                 monthlyPlanList.set(i, UpdatedMonthlyPlan);
                 saveAllmonthlyPlans();
-
+                break;
             }
         }
     }
@@ -83,5 +80,29 @@ public class monthlyPlanDAO {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    // Insertion Sort Implementation
+    public void sortPlansUsingInsertionSort() {
+        for (int i = 1; i < monthlyPlanList.size(); i++) {
+            monthlyPlans key = monthlyPlanList.get(i);
+            int j = i - 1;
+
+            while (j >= 0 && monthlyPlanList.get(j).compareTo(key) > 0) {
+                monthlyPlanList.set(j + 1, monthlyPlanList.get(j));
+                j = j - 1;
+            }
+            monthlyPlanList.set(j + 1, key);
+        }
+        saveAllmonthlyPlans();
+    }
+
+    // Add these getter methods for data file paths
+    public String getDataFilePath() {
+        return DATA_FILE;
+    }
+
+    public String getDirectoryPath() {
+        return DIRECTORY;
     }
 }
