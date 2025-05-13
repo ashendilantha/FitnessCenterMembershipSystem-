@@ -204,13 +204,6 @@ public class TrainerDAO {
                     trainer.getTrainerId(), trainer.getName(), trainer.getEmail(),
                     trainer.getContactNumber(), trainer.getSpecialty(), trainer.getPassword());
 
-//            if (trainer instanceof FullTimeTrainer) {
-//                FullTimeTrainer ft = (FullTimeTrainer) trainer;
-//                line += String.format(",FULLTIME,%.2f,%d", ft.getSalary(), ft.getWorkingHours());
-//            } else if (trainer instanceof PartTimeTrainer) {
-//                PartTimeTrainer pt = (PartTimeTrainer) trainer;
-//                line += String.format(",PARTTIME,%.2f,%d", pt.getHourlyRate(), pt.getHoursPerWeek());
-//            }
 
             writer.write(line);
             writer.newLine();
