@@ -54,7 +54,7 @@ public class PaymentServlet extends HttpServlet {
 
     private void processPayment(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         int memberId = Integer.parseInt(request.getParameter("memberId"));
-        int planId = Integer.parseInt(request.getParameter("planId"));
+        String planId = request.getParameter("planId");
         String classId = request.getParameter("classId");
         double amount = Double.parseDouble(request.getParameter("amount"));
         String description = request.getParameter("description");

@@ -57,7 +57,7 @@ public class PaymentDAO {
                 Payment payment = new Payment(
                         Integer.parseInt(data[0]),
                         Integer.parseInt(data[1]),
-                        Integer.parseInt(data[2]),
+                        data[2],
                         data[3],
                         Double.parseDouble(data[4]),
                         LocalDateTime.parse(data[5]),

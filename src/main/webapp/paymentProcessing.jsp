@@ -1,3 +1,6 @@
+<%@ page import="lk.sliit.fitnesscenter.fitnesscentermembershipsystem.dao.FitnessClassDAO" %>
+<%@ page import="lk.sliit.fitnesscenter.fitnesscentermembershipsystem.model.FitnessClass" %>
+<%@ page import="java.util.List" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
@@ -95,12 +98,26 @@
 
         <div class="mb-3">
             <label for="planId" class="form-label">Plan ID</label>
-            <input type="number" class="form-control" id="planId" name="planId">
+            <input type="text" class="form-control" id="planId" name="planId">
         </div>
 
         <div class="mb-3">
-            <label for="classId" class="form-label">Class ID</label>
-            <input type="text" class="form-control" id="classId" name="classId">
+            <label for="classId" class="form-label">Class</label>
+            <select class="form-select" id="classId" name="classId">
+                <option value="">Select Class (Optional)</option>
+                <%
+                    FitnessClassDAO fitnessClassDAO = new FitnessClassDAO();
+                    List<FitnessClass> fitnessClasses = fitnessClassDAO.getAllClasses();
+                    for (FitnessClass fitnessClass : fitnessClasses) {
+                %>
+                <option value="<%= fitnessClass.getClassId() %>">
+                    <%= fitnessClass.getClassName() %>
+                </option>
+                <%
+                    }
+                %>
+            </select>
+            <div id="classIdError" class="error-message"></div>
         </div>
 
         <div class="mb-3">

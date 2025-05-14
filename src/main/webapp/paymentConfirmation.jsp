@@ -14,15 +14,6 @@
       color: #e0e0e0;
       font-family: 'Poppins', Arial, sans-serif;
     }
-    .navbar {
-      background: #181c23;
-      border-bottom: 2px solid #1e7a53;
-    }
-    .navbar-brand {
-      font-family: 'Oswald', sans-serif;
-      font-size: 2rem;
-      color: #1e7a53 !important;
-    }
     .confirmation-card {
       max-width: 520px;
       margin: 60px auto 0 auto;
@@ -31,17 +22,18 @@
       box-shadow: 0 4px 24px rgba(30,122,83,0.10);
       padding: 32px 24px 24px 24px;
     }
+    h1, .invoice-title {
+      color: #1e7a53;
+      font-family: 'Oswald', sans-serif;
+      text-align: center;
+      margin-bottom: 28px;
+    }
     .success {
       color: #27ef8c;
       font-weight: bold;
       font-size: 1.2rem;
       text-align: center;
-    }
-    .invoice-title {
-      color: #1e7a53;
-      font-family: 'Oswald', sans-serif;
-      margin-bottom: 24px;
-      text-align: center;
+      margin-bottom: 18px;
     }
     .invoice-row {
       margin-bottom: 10px;
@@ -70,6 +62,15 @@
       background: #27ef8c;
       color: #181c23;
     }
+    .navbar {
+      background: #181c23;
+      border-bottom: 2px solid #1e7a53;
+    }
+    .navbar-brand {
+      font-family: 'Oswald', sans-serif;
+      font-size: 2rem;
+      color: #1e7a53 !important;
+    }
   </style>
 </head>
 <body>
@@ -80,6 +81,7 @@
 </nav>
 
 <div class="confirmation-card">
+  <h1><i class="fas fa-credit-card me-2"></i>Payment Confirmation</h1>
   <div class="success">
     <i class="fas fa-check-circle me-2"></i>${message}
   </div>
@@ -93,7 +95,7 @@
     <span class="label">Member ID:</span>
     <span>${payment.memberId}</span>
   </div>
-  <c:if test="${payment.planId != 0}">
+  <c:if test="${not empty payment.planId}">
     <div class="invoice-row">
       <span class="label">Plan ID:</span>
       <span>${payment.planId}</span>

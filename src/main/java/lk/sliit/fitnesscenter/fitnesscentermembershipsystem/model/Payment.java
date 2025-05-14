@@ -5,7 +5,7 @@ import java.time.LocalDateTime;
 public class Payment {
     private int paymentId;
     private int memberId;
-    private int planId;
+    private String planId;
     private String classId;
     private double amount;
     private LocalDateTime paymentDate;
@@ -15,7 +15,7 @@ public class Payment {
     public Payment() {
     }
 
-    public Payment(int paymentId, int memberId, int planId, String classId, double amount,
+    public Payment(int paymentId, int memberId, String planId, String classId, double amount,
                    LocalDateTime paymentDate, String description, String paymentMethod) {
         this.paymentId = paymentId;
         this.memberId = memberId;
@@ -44,11 +44,11 @@ public class Payment {
         this.memberId = memberId;
     }
 
-    public int getPlanId() {
+    public String getPlanId() {
         return planId;
     }
 
-    public void setPlanId(int planId) {
+    public void setPlanId(String planId) {
         this.planId = planId;
     }
 
