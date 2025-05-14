@@ -244,6 +244,7 @@
   %>
   <div class="class-card" style="--card-index: <%= cardIndex++ %>;">
     <h5><%= fc.getClassName() %></h5>
+    <p><b>Class ID: </b><b style="color: white"><%= fc.getClassId()%></b></p>
     <p><b>Date & Time:</b> <%= fc.getFormattedDateTime() %></p>
     <% if (trainer != null) { %>
     <p><b>Trainer:</b> <%= trainer.getName() %></p>

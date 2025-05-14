@@ -18,10 +18,8 @@ public class AddClassServlet extends HttpServlet {
         String classId = request.getParameter("classId");
         String className = request.getParameter("className");
         String dateTimeStr = request.getParameter("dateTime");
-//        int duration = Integer.parseInt(request.getParameter("duration"));
         String trainerId = request.getParameter("trainerId");
         int maxParticipants = Integer.parseInt(request.getParameter("maxParticipants"));
-//        String description = request.getParameter("description");
         String classType = request.getParameter("classType");
 
         LocalDateTime dateTime = LocalDateTime.parse(dateTimeStr, DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm"));

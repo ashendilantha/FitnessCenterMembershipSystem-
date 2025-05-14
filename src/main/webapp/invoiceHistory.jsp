@@ -74,7 +74,7 @@
             background: #1e7a53;
         }
         .table thead th {
-            color: #e0e0e0;
+            color: black;
             border-bottom: none;
         }
         .table tbody tr:nth-of-type(odd) {

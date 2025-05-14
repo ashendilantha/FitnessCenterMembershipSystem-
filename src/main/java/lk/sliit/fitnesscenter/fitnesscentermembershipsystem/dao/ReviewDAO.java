@@ -5,33 +5,15 @@ import lk.sliit.fitnesscenter.fitnesscentermembershipsystem.model.Review;
 
 import java.io.*;
 import java.nio.file.Files;
-import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.time.LocalDate;
 import java.util.*;
-import java.util.stream.Collectors;
 
 public class ReviewDAO {
     private static final String FILE_PATH = System.getProperty("user.home") + "/Hansana/reviews.txt";
     private static final String DELIMITER = "|";
     private static final String HEADER = "memberId|rating|comment|reviewDate";
     private static int lastId = 0;
-
-    static {
-        // Create directory if it doesn't exist
-        try {
-            Path dir = Paths.get(System.getProperty("user.home"), "FitnessCenter");
-            if (!Files.exists(dir)) {
-                Files.createDirectories(dir);
-            }
-            // Create empty file if it doesn't exist
-            if (!Files.exists(Paths.get(FILE_PATH))) {
-                Files.write(Paths.get(FILE_PATH), HEADER.getBytes());
-            }
-        } catch (IOException e) {
-            System.err.println("Failed to initialize review storage: " + e.getMessage());
-        }
-    }
 
     // Create a new review
     public void addReview(Review review) {
@@ -79,8 +61,8 @@ public class ReviewDAO {
             Review review = new Review();
             review.setReviewId(Integer.parseInt(parts[0]));
             review.setMemberId(Integer.parseInt(parts[1]));
-            review.setTrainerId(parts[2].isEmpty() ? null : Integer.parseInt(parts[2]));
-            review.setClassId(parts[3].isEmpty() ? null : Integer.parseInt(parts[3]));
+            review.setTrainerId(parts[2].isEmpty() ? null : parts[2]);
+            review.setClassId(parts[3].isEmpty() ? null : parts[3]);
             review.setRating(Integer.parseInt(parts[4]));
             review.setComment(parts[5]);
             review.setReviewDate(LocalDate.parse(parts[6]));
@@ -108,8 +90,8 @@ public class ReviewDAO {
         return String.join(DELIMITER,
                 String.valueOf(review.getReviewId()),
                 String.valueOf(review.getMemberId()),
-                review.getTrainerId() != null ? String.valueOf(review.getTrainerId()) : "",
-                review.getClassId() != null ? String.valueOf(review.getClassId()) : "",
+                review.getTrainerId() == null ? "" : review.getTrainerId(),
+                review.getClassId() == null ? "" : review.getClassId(),
                 String.valueOf(review.getRating()),
                 review.getComment(),
                 review.getReviewDate().toString()
@@ -117,17 +99,29 @@ public class ReviewDAO {
     }
 
     // Get reviews by class ID
-    public List<Review> getReviewsByClass(int classId) {
-        return getAllReviews().stream()
-                .filter(review -> review.getClassId() != null && review.getClassId() == classId)
-                .collect(Collectors.toList());
+
+    public List<Review> getReviewsByClass(String classId) {
+        List<Review> all = getAllReviews();
+        List<Review> filtered = new ArrayList<>();
+        for (Review r : all) {
+            if (classId.equals(r.getClassId())) {
+                filtered.add(r);
+            }
+        }
+        return filtered;
     }
 
     // Get reviews by trainer ID
-    public List<Review> getReviewsByTrainer(int trainerId) {
-        return getAllReviews().stream()
-                .filter(review -> review.getTrainerId() != null && review.getTrainerId() == trainerId)
-                .collect(Collectors.toList());
+
+    public List<Review> getReviewsByTrainer(String trainerId) {
+        List<Review> all = getAllReviews();
+        List<Review> filtered = new ArrayList<>();
+        for (Review r : all) {
+            if (trainerId.equals(r.getTrainerId())) {
+                filtered.add(r);
+            }
+        }
+        return filtered;
     }
 
     // Update a review

@@ -20,16 +20,16 @@ public class ReviewServlet extends HttpServlet {
 
         if ("add".equals(action)) {
             int memberId = Integer.parseInt(request.getParameter("memberId"));
-            Integer trainerId = null;
-            if (request.getParameter("trainerId") != null && !request.getParameter("trainerId").isEmpty()) {
-                trainerId = Integer.parseInt(request.getParameter("trainerId"));
-            }
-            Integer classId = null;
-            if (request.getParameter("classId") != null && !request.getParameter("classId").isEmpty()) {
-                classId = Integer.parseInt(request.getParameter("classId"));
-            }
+
+            String trainerId = request.getParameter("trainerId");
+            if (trainerId != null && trainerId.isEmpty()) trainerId = null;
+
+            String classId = request.getParameter("classId");
+            if (classId != null && classId.isEmpty()) classId = null;
+
             int rating = Integer.parseInt(request.getParameter("rating"));
             String comment = request.getParameter("comment");
+
 
             Review review = new Review(0, memberId, trainerId, classId, rating, comment, LocalDate.now());
             reviewDAO.addReview(review);
@@ -64,22 +64,15 @@ public class ReviewServlet extends HttpServlet {
         String id = request.getParameter("id");
 
         if (type != null && id != null) {
-            try {
-                int idNum = Integer.parseInt(id);
-                List<Review> reviews;
-
-                if ("class".equals(type)) {
-                    reviews = reviewDAO.getReviewsByClass(idNum);
-                } else if ("trainer".equals(type)) {
-                    reviews = reviewDAO.getReviewsByTrainer(idNum);
-                } else {
-                    reviews = reviewDAO.getAllReviews();
-                }
-
-                request.setAttribute("reviews", reviews);
-            } catch (NumberFormatException e) {
-                request.setAttribute("error", "Invalid ID format");
+            List<Review> reviews;
+            if ("class".equals(type)) {
+                reviews = reviewDAO.getReviewsByClass(id);
+            } else if ("trainer".equals(type)) {
+                reviews = reviewDAO.getReviewsByTrainer(id);
+            } else {
+                reviews = reviewDAO.getAllReviews();
             }
+            request.setAttribute("reviews", reviews);
         } else {
             request.setAttribute("reviews", reviewDAO.getAllReviews());
         }

@@ -135,9 +135,6 @@
         <input type="password" class="form-control" id="password" name="password" required>
       </div>
       <button type="submit" class="btn btn-pulse w-100">Login</button>
-<%--      <div class="text-center mt-3">--%>
-<%--        <p>Don't have an account? <a href="addTrainer.jsp">Register as Trainer</a></p>--%>
-<%--      </div>--%>
     </form>
   </div>
 </div>

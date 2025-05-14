@@ -50,7 +50,7 @@ public class UpdateTrainerServlet extends HttpServlet {
                     request.setAttribute("message", "Failed to update trainer. Please try again.");
                 }
             } catch (NumberFormatException e) {
-                request.setAttribute("message", "Invalid number format for salary, working hours, hourly rate, or hours per week.");
+                request.setAttribute("message", "Invalid number format.");
             } catch (IllegalArgumentException e) {
                 request.setAttribute("message", e.getMessage());
             } catch (Exception e) {
