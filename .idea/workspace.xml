@@ -9,39 +9,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="56c48828-26ea-41c4-a6fb-c5934634aaa9" name="Changes" comment="feat: update AdminServlet.java">
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/invoiceHistory.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/paymentConfirmation.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/paymentProcessing.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/webContexts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/webContexts.xml" afterDir="false" />
+    <list default="true" id="56c48828-26ea-41c4-a6fb-c5934634aaa9" name="Changes" comment="update all files">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lk/sliit/fitnesscenter/fitnesscentermembershipsystem/dao/FitnessClassDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/sliit/fitnesscenter/fitnesscentermembershipsystem/dao/FitnessClassDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lk/sliit/fitnesscenter/fitnesscentermembershipsystem/dao/MemberDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/sliit/fitnesscenter/fitnesscentermembershipsystem/dao/MemberDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/lk/sliit/fitnesscenter/fitnesscentermembershipsystem/dao/PaymentDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/sliit/fitnesscenter/fitnesscentermembershipsystem/dao/PaymentDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/sliit/fitnesscenter/fitnesscentermembershipsystem/model/CashPayment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/sliit/fitnesscenter/fitnesscentermembershipsystem/model/CashPayment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/sliit/fitnesscenter/fitnesscentermembershipsystem/model/CreditCardPayment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/sliit/fitnesscenter/fitnesscentermembershipsystem/model/CreditCardPayment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/sliit/fitnesscenter/fitnesscentermembershipsystem/model/Payment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/sliit/fitnesscenter/fitnesscentermembershipsystem/model/Payment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/sliit/fitnesscenter/fitnesscentermembershipsystem/servlet/AdminPaymentServlet.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/sliit/fitnesscenter/fitnesscentermembershipsystem/servlet/PaymentServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/sliit/fitnesscenter/fitnesscentermembershipsystem/servlet/PaymentServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/sliit/fitnesscenter/fitnesscentermembershipsystem/servlet/UpdateTrainerServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/sliit/fitnesscenter/fitnesscentermembershipsystem/servlet/UpdateTrainerServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/Monthly-plan-admin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Monthly-plan-admin.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/Monthly-plan-member.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Monthly-plan-member.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/Yearly-plan-admin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Yearly-plan-admin.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/Yearly-plan-member.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Yearly-plan-member.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/addMember.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/addMember.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/adminBillingDashboard.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/adminDashboard.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/adminDashboard.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/adminReviews.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/adminReviews.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/editReview.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/loginTrainer.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/loginTrainer.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/memberProfile.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/memberProfile.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/paymentForm.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/paymentHistory.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/publicClassSchedule.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/publicClassSchedule.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/publicTrainers.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/publicTrainers.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/submitReview.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/submitReview.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/trainerList.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/trainerList.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/trainerProfile.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/trainerProfile.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/viewMembers.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/viewMembers.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lk/sliit/fitnesscenter/fitnesscentermembershipsystem/dao/ReviewDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/sliit/fitnesscenter/fitnesscentermembershipsystem/dao/ReviewDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lk/sliit/fitnesscenter/fitnesscentermembershipsystem/dao/TrainerDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/sliit/fitnesscenter/fitnesscentermembershipsystem/dao/TrainerDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lk/sliit/fitnesscenter/fitnesscentermembershipsystem/dao/monthlyPlanDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/sliit/fitnesscenter/fitnesscentermembershipsystem/dao/monthlyPlanDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lk/sliit/fitnesscenter/fitnesscentermembershipsystem/model/Member.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/sliit/fitnesscenter/fitnesscentermembershipsystem/model/Member.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lk/sliit/fitnesscenter/fitnesscentermembershipsystem/model/Review.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/sliit/fitnesscenter/fitnesscentermembershipsystem/model/Review.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lk/sliit/fitnesscenter/fitnesscentermembershipsystem/servlet/MemberServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/sliit/fitnesscenter/fitnesscentermembershipsystem/servlet/MemberServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lk/sliit/fitnesscenter/fitnesscentermembershipsystem/servlet/UpdateMemberServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/sliit/fitnesscenter/fitnesscentermembershipsystem/servlet/UpdateMemberServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lk/sliit/fitnesscenter/fitnesscentermembershipsystem/servlet/monthlyPlanServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/sliit/fitnesscenter/fitnesscentermembershipsystem/servlet/monthlyPlanServlet.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,14 +39,36 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="dev" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;ashendilantha&quot;
+  }
+}</component>
   <component name="GithubDefaultAccount">
     <option name="defaultAccountId" value="f97c4193-fb6f-4b6c-9219-12662f2e7c7d" />
   </component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/ashendilantha/FitnessCenterMembershipSystem-.git&quot;,
+    &quot;accountId&quot;: &quot;f97c4193-fb6f-4b6c-9219-12662f2e7c7d&quot;
+  },
+  &quot;recentNewPullRequestHead&quot;: {
+    &quot;server&quot;: {
+      &quot;useHttp&quot;: false,
+      &quot;host&quot;: &quot;github.com&quot;,
+      &quot;port&quot;: null,
+      &quot;suffix&quot;: null
+    },
+    &quot;owner&quot;: &quot;ashendilantha&quot;,
+    &quot;repository&quot;: &quot;FitnessCenterMembershipSystem-&quot;
+  }
+}</component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
     <option name="FILTER_WARNINGS" value="false" />
@@ -90,23 +92,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Tomcat Server.Tomcat 11.0.5.executor": "Run",
-    "git-widget-placeholder": "dev",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/media/ashen/New Volume/Projects/Assignments/Hansana/FitnessCenterMembershipSystem/src/main/webapp",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Tomcat Server.Tomcat 11.0.5.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;dev&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/ashen/Hansana/FitnessCenterMembershipSystem--master&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/webapp" />
@@ -172,7 +174,10 @@
       <option name="presentableId" value="Default" />
       <updated>1746851580878</updated>
       <workItem from="1746851581915" duration="1718000" />
-      <workItem from="1746984361171" duration="53438000" />
+      <workItem from="1746984361171" duration="61260000" />
+      <workItem from="1747121661630" duration="259000" />
+      <workItem from="1747144755071" duration="13367000" />
+      <workItem from="1747205291405" duration="28244000" />
     </task>
     <task id="LOCAL-00001" summary="init commit">
       <option name="closed" value="true" />
@@ -230,7 +235,63 @@
       <option name="project" value="LOCAL" />
       <updated>1747062781998</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="update all files">
+      <option name="closed" value="true" />
+      <created>1747090419020</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1747090419020</updated>
+    </task>
+    <task id="LOCAL-00009" summary="update all files">
+      <option name="closed" value="true" />
+      <created>1747117992034</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1747117992034</updated>
+    </task>
+    <task id="LOCAL-00010" summary="update all files">
+      <option name="closed" value="true" />
+      <created>1747120620886</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1747120620886</updated>
+    </task>
+    <task id="LOCAL-00011" summary="update all files">
+      <option name="closed" value="true" />
+      <created>1747121740265</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1747121740265</updated>
+    </task>
+    <task id="LOCAL-00012" summary="update all files">
+      <option name="closed" value="true" />
+      <created>1747212679053</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1747212679053</updated>
+    </task>
+    <task id="LOCAL-00013" summary="update all files">
+      <option name="closed" value="true" />
+      <created>1747234206426</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1747234206426</updated>
+    </task>
+    <task id="LOCAL-00014" summary="update all files">
+      <option name="closed" value="true" />
+      <created>1747234272146</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1747234272146</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -242,6 +303,7 @@
     <MESSAGE value="feat: Add Review files" />
     <MESSAGE value="feat: Add class files" />
     <MESSAGE value="feat: update AdminServlet.java" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: update AdminServlet.java" />
+    <MESSAGE value="update all files" />
+    <option name="LAST_COMMIT_MESSAGE" value="update all files" />
   </component>
 </project>

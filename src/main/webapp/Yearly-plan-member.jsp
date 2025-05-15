@@ -1,379 +1,3 @@
-<%--&lt;%&ndash;<%@ page import="java.io.*" %>&ndash;%&gt;--%>
-<%--&lt;%&ndash;<!DOCTYPE html>&ndash;%&gt;--%>
-<%--&lt;%&ndash;<html lang="en">&ndash;%&gt;--%>
-<%--&lt;%&ndash;<head>&ndash;%&gt;--%>
-<%--&lt;%&ndash;    <meta charset="UTF-8">&ndash;%&gt;--%>
-<%--&lt;%&ndash;    <meta name="viewport" content="width=device-width, initial-scale=1.0">&ndash;%&gt;--%>
-<%--&lt;%&ndash;    <title>Plans List</title>&ndash;%&gt;--%>
-<%--&lt;%&ndash;    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">&ndash;%&gt;--%>
-<%--&lt;%&ndash;</head>&ndash;%&gt;--%>
-<%--&lt;%&ndash;<body>&ndash;%&gt;--%>
-
-<%--&lt;%&ndash;<div class="container mt-5">&ndash;%&gt;--%>
-<%--&lt;%&ndash;    <div class="d-flex justify-content-between align-items-center mb-4">&ndash;%&gt;--%>
-<%--&lt;%&ndash;        <h2 class="mb-0 text-primary"><i class="bi bi-car-front"></i> Yearly plans</h2>&ndash;%&gt;--%>
-
-<%--&lt;%&ndash;    </div>&ndash;%&gt;--%>
-<%--&lt;%&ndash;    <div class="table-responsive">&ndash;%&gt;--%>
-<%--&lt;%&ndash;        <table class="table table-bordered table-hover text-center">&ndash;%&gt;--%>
-<%--&lt;%&ndash;            <thead class="table-dark">&ndash;%&gt;--%>
-<%--&lt;%&ndash;            <tr>&ndash;%&gt;--%>
-<%--&lt;%&ndash;                <th>Plan ID</th>&ndash;%&gt;--%>
-<%--&lt;%&ndash;                <th>Plan</th>&ndash;%&gt;--%>
-<%--&lt;%&ndash;                <th>Base Price(LKR)</th>&ndash;%&gt;--%>
-<%--&lt;%&ndash;                <th>Addons(LKR)(LKR)</th>&ndash;%&gt;--%>
-<%--&lt;%&ndash;                <th>Subtotal</th>&ndash;%&gt;--%>
-<%--&lt;%&ndash;                <th>Discount</th>&ndash;%&gt;--%>
-<%--&lt;%&ndash;                <th>Final Price</th>&ndash;%&gt;--%>
-<%--&lt;%&ndash;            </tr>&ndash;%&gt;--%>
-<%--&lt;%&ndash;            </thead>&ndash;%&gt;--%>
-<%--&lt;%&ndash;            <tbody>&ndash;%&gt;--%>
-<%--&lt;%&ndash;            &lt;%&ndash;%>--%>
-<%--&lt;%&ndash;                String filePath = "C:\\Users\\yuthi\\Desktop\\Add Member plans\\Plan.info\\yearly-plan.txt";&ndash;%&gt;--%>
-<%--&lt;%&ndash;                File file = new File(filePath);&ndash;%&gt;--%>
-<%--&lt;%&ndash;                if (file.exists()) {&ndash;%&gt;--%>
-<%--&lt;%&ndash;                    BufferedReader reader = new BufferedReader(new FileReader(file));&ndash;%&gt;--%>
-<%--&lt;%&ndash;                    String line;&ndash;%&gt;--%>
-<%--&lt;%&ndash;                    while ((line = reader.readLine()) != null) {&ndash;%&gt;--%>
-<%--&lt;%&ndash;                        String[] data = line.split(",");&ndash;%&gt;--%>
-<%--&lt;%&ndash;                        if (data.length == 7) {&ndash;%&gt;--%>
-<%--&lt;%&ndash;            %>&ndash;%&gt;--%>
-<%--&lt;%&ndash;            <tr>&ndash;%&gt;--%>
-<%--&lt;%&ndash;                <td><%= data[0] %></td>&ndash;%&gt;--%>
-<%--&lt;%&ndash;                <td><%= data[1] %></td>&ndash;%&gt;--%>
-<%--&lt;%&ndash;                <td><%= data[2] %></td>&ndash;%&gt;--%>
-<%--&lt;%&ndash;                <td><%= data[3] %></td>&ndash;%&gt;--%>
-<%--&lt;%&ndash;                <td><%= data[4] %></td>&ndash;%&gt;--%>
-<%--&lt;%&ndash;                <td><%= data[5] %></td>&ndash;%&gt;--%>
-<%--&lt;%&ndash;                <td><%= data[6] %></td>&ndash;%&gt;--%>
-
-
-<%--&lt;%&ndash;            </tr>&ndash;%&gt;--%>
-<%--&lt;%&ndash;            &lt;%&ndash;%>--%>
-<%--&lt;%&ndash;                        }&ndash;%&gt;--%>
-<%--&lt;%&ndash;                    }&ndash;%&gt;--%>
-<%--&lt;%&ndash;                    reader.close();&ndash;%&gt;--%>
-<%--&lt;%&ndash;                }&ndash;%&gt;--%>
-<%--&lt;%&ndash;            %>&ndash;%&gt;--%>
-<%--&lt;%&ndash;            </tbody>&ndash;%&gt;--%>
-<%--&lt;%&ndash;        </table>&ndash;%&gt;--%>
-
-<%--&lt;%&ndash;    </div>&ndash;%&gt;--%>
-<%--&lt;%&ndash;    <div class="text-center mt-3">&ndash;%&gt;--%>
-<%--&lt;%&ndash;        <a href="index.jsp" class="btn btn-primary">Go Back</a>&ndash;%&gt;--%>
-<%--&lt;%&ndash;    </div>&ndash;%&gt;--%>
-<%--&lt;%&ndash;</div>&ndash;%&gt;--%>
-
-<%--&lt;%&ndash;<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>&ndash;%&gt;--%>
-<%--&lt;%&ndash;</body>&ndash;%&gt;--%>
-<%--&lt;%&ndash;</html>&ndash;%&gt;--%>
-
-
-
-
-<%--<%@ page import="java.io.*" %>--%>
-<%--<!DOCTYPE html>--%>
-<%--<html lang="en">--%>
-<%--<head>--%>
-<%--    <meta charset="UTF-8">--%>
-<%--    <meta name="viewport" content="width=device-width, initial-scale=1.0">--%>
-<%--    <title>Plans List | Pulse Gym</title>--%>
-<%--    <!-- Bootstrap 5 CSS -->--%>
-<%--    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">--%>
-<%--    <!-- Font Awesome for icons -->--%>
-<%--    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">--%>
-<%--    <!-- Google Fonts -->--%>
-<%--    <link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet">--%>
-<%--    <link href="https://fonts.googleapis.com/css?family=Oswald:700&display=swap" rel="stylesheet">--%>
-<%--    <style>--%>
-<%--        body {--%>
-<%--            background: #15171b;--%>
-<%--            color: #e0e0e0;--%>
-<%--            font-family: 'Poppins', sans-serif;--%>
-<%--        }--%>
-<%--        .navbar {--%>
-<%--            background: #181c23 !important;--%>
-<%--            border-bottom: 2px solid #1e7a53;--%>
-<%--        }--%>
-<%--        .navbar-brand {--%>
-<%--            font-family: 'Oswald', sans-serif;--%>
-<%--            font-size: 2rem;--%>
-<%--            color: #1e7a53 !important;--%>
-<%--        }--%>
-<%--        h2 {--%>
-<%--            font-family: 'Oswald', sans-serif;--%>
-<%--            color: #1e7a53;--%>
-<%--            margin-bottom: 32px;--%>
-<%--        }--%>
-<%--        .table {--%>
-<%--            color: #e0e0e0;--%>
-<%--            background: #181c23;--%>
-<%--        }--%>
-<%--        .table thead {--%>
-<%--            background: #1e7a53;--%>
-<%--        }--%>
-<%--        .table thead th {--%>
-<%--            color: #e0e0e0;--%>
-<%--            border-bottom: none;--%>
-<%--        }--%>
-<%--        .table tbody tr:nth-of-type(odd) {--%>
-<%--            background-color: #1a1d22;--%>
-<%--        }--%>
-<%--        .btn-primary {--%>
-<%--            background: #1e7a53;--%>
-<%--            border: none;--%>
-<%--            font-weight: bold;--%>
-<%--        }--%>
-<%--        .btn-primary:hover {--%>
-<%--            background: #27ef8c;--%>
-<%--            color: #181c23;--%>
-<%--        }--%>
-<%--        .text-primary {--%>
-<%--            color: #27ef8c !important;--%>
-<%--        }--%>
-<%--        .icon {--%>
-<%--            font-size: 1.5rem;--%>
-<%--            vertical-align: middle;--%>
-<%--            margin-right: 8px;--%>
-<%--        }--%>
-<%--        .container {--%>
-<%--            margin-top: 60px;--%>
-<%--            margin-bottom: 40px;--%>
-<%--        }--%>
-<%--    </style>--%>
-<%--</head>--%>
-<%--<body>--%>
-
-<%--<nav class="navbar navbar-expand-lg navbar-dark fixed-top">--%>
-<%--    <div class="container">--%>
-<%--        <a class="navbar-brand" href="index.jsp">Pulse Gym</a>--%>
-<%--    </div>--%>
-<%--</nav>--%>
-
-<%--<div class="container">--%>
-<%--    <div class="d-flex justify-content-between align-items-center mb-4">--%>
-<%--        <h2 class="mb-0 text-primary"><i class="fas fa-list icon"></i> Yearly Plans</h2>--%>
-<%--    </div>--%>
-<%--    <div class="table-responsive">--%>
-<%--        <table class="table table-bordered table-hover text-center align-middle">--%>
-<%--            <thead>--%>
-<%--            <tr>--%>
-<%--                <th>Plan ID</th>--%>
-<%--                <th>Plan</th>--%>
-<%--                <th>Base Price (LKR)</th>--%>
-<%--                <th>Addons (LKR)</th>--%>
-<%--                <th>Subtotal (LKR)</th>--%>
-<%--                <th>Discount (%)</th>--%>
-<%--                <th>Final Price (LKR)</th>--%>
-<%--            </tr>--%>
-<%--            </thead>--%>
-<%--            <tbody>--%>
-<%--            <%--%>
-<%--                String filePath = "C:\\Users\\yuthi\\Desktop\\Add Member plans\\Plan.info\\yearly-plan.txt";--%>
-<%--                File file = new File(filePath);--%>
-<%--                if (file.exists()) {--%>
-<%--                    BufferedReader reader = new BufferedReader(new FileReader(file));--%>
-<%--                    String line;--%>
-<%--                    while ((line = reader.readLine()) != null) {--%>
-<%--                        String[] data = line.split(",");--%>
-<%--                        if (data.length == 7) {--%>
-<%--            %>--%>
-<%--            <tr>--%>
-<%--                <td><%= data[0] %></td>--%>
-<%--                <td><%= data[1] %></td>--%>
-<%--                <td><%= data[2] %></td>--%>
-<%--                <td><%= data[3] %></td>--%>
-<%--                <td><%= data[4] %></td>--%>
-<%--                <td><%= data[5] %></td>--%>
-<%--                <td><%= data[6] %></td>--%>
-<%--            </tr>--%>
-<%--            <%--%>
-<%--                    }--%>
-<%--                }--%>
-<%--                reader.close();--%>
-<%--            } else {--%>
-<%--            %>--%>
-<%--            <tr>--%>
-<%--                <td colspan="7" class="text-center text-warning">No plans found.</td>--%>
-<%--            </tr>--%>
-<%--            <%  }--%>
-<%--            %>--%>
-<%--            </tbody>--%>
-<%--        </table>--%>
-<%--    </div>--%>
-<%--    <div class="text-center mt-3">--%>
-<%--        <a href="index.jsp" class="btn btn-primary">Go Back</a>--%>
-<%--    </div>--%>
-<%--</div>--%>
-
-<%--<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>--%>
-<%--</body>--%>
-<%--</html>--%>
-
-
-
-<%--<%@ page import="java.io.*" %>--%>
-<%--<!DOCTYPE html>--%>
-<%--<html lang="en">--%>
-<%--<head>--%>
-<%--    <meta charset="UTF-8">--%>
-<%--    <meta name="viewport" content="width=device-width, initial-scale=1.0">--%>
-<%--    <title>Yearly Plans | Pulse Gym</title>--%>
-<%--    <!-- Bootstrap 5 CSS -->--%>
-<%--    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">--%>
-<%--    <!-- Font Awesome for icons -->--%>
-<%--    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">--%>
-<%--    <!-- Google Fonts -->--%>
-<%--    <link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet">--%>
-<%--    <link href="https://fonts.googleapis.com/css?family=Oswald:700&display=swap" rel="stylesheet">--%>
-<%--    <style>--%>
-<%--        body {--%>
-<%--            background: #15171b;--%>
-<%--            color: #e0e0e0;--%>
-<%--            font-family: 'Poppins', sans-serif;--%>
-<%--        }--%>
-<%--        .navbar {--%>
-<%--            background: #181c23 !important;--%>
-<%--            border-bottom: 2px solid #1e7a53;--%>
-<%--            margin-bottom: 0;--%>
-<%--        }--%>
-<%--        .navbar-brand {--%>
-<%--            font-family: 'Oswald', sans-serif;--%>
-<%--            font-size: 2rem;--%>
-<%--            color: #1e7a53 !important;--%>
-<%--        }--%>
-<%--        .plans-container {--%>
-<%--            max-width: 1100px;--%>
-<%--            margin: 40px auto 0 auto;--%>
-<%--            padding: 32px 24px 24px 24px;--%>
-<%--            background: #1a1d22;--%>
-<%--            border-radius: 1rem;--%>
-<%--            box-shadow: 0 4px 24px rgba(30,122,83,0.10);--%>
-<%--        }--%>
-<%--        h2 {--%>
-<%--            font-family: 'Oswald', sans-serif;--%>
-<%--            color: #1e7a53;--%>
-<%--            margin-bottom: 28px;--%>
-<%--            text-align: center;--%>
-<%--        }--%>
-<%--        .table {--%>
-<%--            color: #e0e0e0;--%>
-<%--            background: #181c23;--%>
-<%--            margin-bottom: 0;--%>
-<%--        }--%>
-<%--        .table thead {--%>
-<%--            background: #1e7a53;--%>
-<%--        }--%>
-<%--        .table thead th {--%>
-<%--            color: #e0e0e0;--%>
-<%--            border-bottom: none;--%>
-<%--        }--%>
-<%--        .table tbody tr:nth-of-type(odd) {--%>
-<%--            background-color: #1a1d22;--%>
-<%--        }--%>
-<%--        .btn-primary {--%>
-<%--            background: #1e7a53;--%>
-<%--            border: none;--%>
-<%--            font-weight: bold;--%>
-<%--            border-radius: 0.5rem;--%>
-<%--            padding: 8px 28px;--%>
-<%--        }--%>
-<%--        .btn-primary:hover {--%>
-<%--            background: #27ef8c;--%>
-<%--            color: #181c23;--%>
-<%--        }--%>
-<%--        .text-primary {--%>
-<%--            color: #27ef8c !important;--%>
-<%--        }--%>
-<%--        .icon {--%>
-<%--            font-size: 1.5rem;--%>
-<%--            vertical-align: middle;--%>
-<%--            margin-right: 8px;--%>
-<%--        }--%>
-<%--        @media (max-width: 1200px) {--%>
-<%--            .plans-container {--%>
-<%--                max-width: 98vw;--%>
-<%--                padding: 16px 4px;--%>
-<%--            }--%>
-<%--        }--%>
-<%--        @media (max-width: 600px) {--%>
-<%--            .plans-container {--%>
-<%--                padding: 8px 0;--%>
-<%--            }--%>
-<%--            h2 {--%>
-<%--                font-size: 1.3rem;--%>
-<%--            }--%>
-<%--        }--%>
-<%--    </style>--%>
-<%--</head>--%>
-<%--<body>--%>
-
-<%--<nav class="navbar navbar-expand-lg navbar-dark fixed-top">--%>
-<%--    <div class="container">--%>
-<%--        <a class="navbar-brand" href="index.jsp">Pulse Gym</a>--%>
-<%--    </div>--%>
-<%--</nav>--%>
-
-<%--<div class="plans-container mt-5">--%>
-<%--    <h2><i class="fas fa-list icon"></i>Yearly Plans</h2>--%>
-<%--    <div class="table-responsive">--%>
-<%--        <table class="table table-bordered table-hover text-center align-middle">--%>
-<%--            <thead>--%>
-<%--            <tr>--%>
-<%--                <th>Plan ID</th>--%>
-<%--                <th>Plan</th>--%>
-<%--                <th>Base Price (LKR)</th>--%>
-<%--                <th>Addons (LKR)</th>--%>
-<%--                <th>Subtotal (LKR)</th>--%>
-<%--                <th>Discount (%)</th>--%>
-<%--                <th>Final Price (LKR)</th>--%>
-<%--            </tr>--%>
-<%--            </thead>--%>
-<%--            <tbody>--%>
-<%--            <%--%>
-<%--                String filePath = System.getProperty("user.home") + "/Hansana/yearly-plan.txt";--%>
-<%--                File file = new File(filePath);--%>
-<%--                if (file.exists()) {--%>
-<%--                    BufferedReader reader = new BufferedReader(new FileReader(file));--%>
-<%--                    String line;--%>
-<%--                    while ((line = reader.readLine()) != null) {--%>
-<%--                        String[] data = line.split(",");--%>
-<%--                        if (data.length == 7) {--%>
-<%--            %>--%>
-<%--            <tr>--%>
-<%--                <td><%= data[0] %></td>--%>
-<%--                <td><%= data[1] %></td>--%>
-<%--                <td><%= data[2] %></td>--%>
-<%--                <td><%= data[3] %></td>--%>
-<%--                <td><%= data[4] %></td>--%>
-<%--                <td><%= data[5] %></td>--%>
-<%--                <td><%= data[6] %></td>--%>
-<%--            </tr>--%>
-<%--            <%--%>
-<%--                    }--%>
-<%--                }--%>
-<%--                reader.close();--%>
-<%--            } else {--%>
-<%--            %>--%>
-<%--            <tr>--%>
-<%--                <td colspan="7" class="text-center text-warning">No plans found.</td>--%>
-<%--            </tr>--%>
-<%--            <%  }--%>
-<%--            %>--%>
-<%--            </tbody>--%>
-<%--        </table>--%>
-<%--    </div>--%>
-<%--    <div class="text-center mt-4">--%>
-<%--        <a href="index.jsp" class="btn btn-primary">Go Back</a>--%>
-<%--    </div>--%>
-<%--</div>--%>
-
-<%--<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>--%>
-<%--</body>--%>
-<%--</html>--%>
-
-
-
 <%@ page import="java.io.*" %>
 <!DOCTYPE html>
 <html lang="en">
@@ -528,13 +152,86 @@
                 font-size: 0.8rem;
             }
         }
+
+
+        .navbar {
+            background: #181c23 !important;
+            border-bottom: 2px solid #1e7a53;
+            padding: 12px 0;
+        }
+        .navbar-brand {
+            font-family: 'Oswald', sans-serif;
+            font-size: 2.2rem;
+            color: #1e7a53 !important;
+            transition: color 0.3s ease;
+        }
+        .navbar-brand:hover {
+            color: #27ef8c !important;
+        }
+        .nav-link {
+            color: #e0e0e0 !important;
+            font-weight: 500;
+            margin: 0 12px;
+            position: relative;
+            padding: 5px 0 !important;
+            transition: color 0.3s ease;
+        }
+        .nav-link:before {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: #27ef8c;
+            visibility: hidden;
+            transition: all 0.3s ease-in-out;
+        }
+        .nav-link:hover:before, .nav-link.active:before {
+            visibility: visible;
+            width: 100%;
+        }
+        .nav-link:hover, .nav-link.active {
+            color: #27ef8c !important;
+        }
     </style>
 </head>
 <body>
 
+<!-- Navigation Bar -->
 <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
     <div class="container">
-        <a class="navbar-brand" href="index.jsp" aria-label="Pulse Gym Home">Pulse Gym</a>
+        <a class="navbar-brand" href="#">
+            PULSE<span>GYM</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link active" href="index.jsp"><i class="fas fa-home me-1"></i> Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="addMember.jsp"><i class="fas fa-user-plus me-1"></i> Register</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Monthly-plan-member.jsp"><i class="fas fa-list-alt me-1"></i>Monthly Plans</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Yearly-plan-member.jsp"><i class="fas fa-list-alt me-1"></i>Yearly Plans</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="publicTrainers.jsp"><i class="fas fa-users me-1"></i> Trainers</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="publicClassSchedule.jsp"><i class="fas fa-calendar-alt me-1"></i> Classes</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="loginMember.jsp"><i class="fas fa-sign-in-alt me-1"></i> Login</a>
+                </li>
+            </ul>
+        </div>
     </div>
 </nav>
 

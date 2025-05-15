@@ -151,16 +151,87 @@
                 font-size: 0.8rem;
             }
         }
+
+        .navbar {
+            background: #181c23 !important;
+            border-bottom: 2px solid #1e7a53;
+            padding: 12px 0;
+        }
+        .navbar-brand {
+            font-family: 'Oswald', sans-serif;
+            font-size: 2.2rem;
+            color: #1e7a53 !important;
+            transition: color 0.3s ease;
+        }
+        .navbar-brand:hover {
+            color: #27ef8c !important;
+        }
+        .nav-link {
+            color: #e0e0e0 !important;
+            font-weight: 500;
+            margin: 0 12px;
+            position: relative;
+            padding: 5px 0 !important;
+            transition: color 0.3s ease;
+        }
+        .nav-link:before {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: #27ef8c;
+            visibility: hidden;
+            transition: all 0.3s ease-in-out;
+        }
+        .nav-link:hover:before, .nav-link.active:before {
+            visibility: visible;
+            width: 100%;
+        }
+        .nav-link:hover, .nav-link.active {
+            color: #27ef8c !important;
+        }
     </style>
 </head>
 <body>
 
+<!-- Navigation Bar -->
 <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
     <div class="container">
-        <a class="navbar-brand" href="index.jsp" aria-label="Pulse Gym Home">Pulse Gym</a>
+        <a class="navbar-brand" href="#">
+            PULSE<span>GYM</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link active" href="index.jsp"><i class="fas fa-home me-1"></i> Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="addMember.jsp"><i class="fas fa-user-plus me-1"></i> Register</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Monthly-plan-member.jsp"><i class="fas fa-list-alt me-1"></i>Monthly Plans</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Yearly-plan-member.jsp"><i class="fas fa-list-alt me-1"></i>Yearly Plans</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="publicTrainers.jsp"><i class="fas fa-users me-1"></i> Trainers</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="publicClassSchedule.jsp"><i class="fas fa-calendar-alt me-1"></i> Classes</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="loginMember.jsp"><i class="fas fa-sign-in-alt me-1"></i> Login</a>
+                </li>
+            </ul>
+        </div>
     </div>
 </nav>
-
 <div class="plans-card" aria-labelledby="monthly-plans-heading">
     <h2 id="monthly-plans-heading"><i class="fas fa-calendar-alt icon"></i> Monthly Plans</h2>
     <div class="table-responsive">

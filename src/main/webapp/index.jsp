@@ -570,52 +570,6 @@
 </section>
 
 <!-- Trainers Section -->
-<%--<section class="py-5" style="background-color: var(--secondary-black);">--%>
-<%--    <div class="container py-5">--%>
-<%--        <h2 class="section-title text-white">MEET OUR TRAINERS</h2>--%>
-<%--        <div class="row g-4">--%>
-<%--            <div class="col-lg-4 col-md-6">--%>
-<%--                <div class="trainer-card">--%>
-<%--                    <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Trainer" class="trainer-img">--%>
-<%--                    <h3 class="feature-title">MARK JOHNSON</h3>--%>
-<%--                    <p>Strength & Conditioning coach with 8 years experience helping clients build muscle and strength.</p>--%>
-<%--                    <div class="mt-3">--%>
-<%--                        <span class="badge bg-green">Strength</span>--%>
-<%--                        <span class="badge bg-green">Bodybuilding</span>--%>
-<%--                    </div>--%>
-<%--                </div>--%>
-<%--            </div>--%>
-<%--            <div class="col-lg-4 col-md-6">--%>
-<%--                <div class="trainer-card">--%>
-<%--                    <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Trainer" class="trainer-img">--%>
-<%--                    <h3 class="feature-title">LISA PARKER</h3>--%>
-<%--                    <p>Functional fitness expert specializing in mobility, agility, and overall athletic performance.</p>--%>
-<%--                    <div class="mt-3">--%>
-<%--                        <span class="badge bg-green">Functional</span>--%>
-<%--                        <span class="badge bg-green">Mobility</span>--%>
-<%--                    </div>--%>
-<%--                </div>--%>
-<%--            </div>--%>
-<%--            <div class="col-lg-4 col-md-6">--%>
-<%--                <div class="trainer-card">--%>
-<%--                    <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Trainer" class="trainer-img">--%>
-<%--                    <h3 class="feature-title">SOPHIA LEE</h3>--%>
-<%--                    <p>Yoga and Pilates instructor focused on improving flexibility, balance, and mental wellbeing.</p>--%>
-<%--                    <div class="mt-3">--%>
-<%--                        <span class="badge bg-green">Yoga</span>--%>
-<%--                        <span class="badge bg-green">Pilates</span>--%>
-<%--                    </div>--%>
-<%--                </div>--%>
-<%--            </div>--%>
-<%--        </div>--%>
-<%--        <div class="text-center mt-4">--%>
-<%--            <a href="publicTrainers.jsp" class="btn btn-outline-green">View All Trainers</a>--%>
-<%--        </div>--%>
-<%--    </div>--%>
-<%--</section>--%>
-
-<!-- Trainers Section -->
-<!-- Trainers Section -->
 <section class="py-5" style="background: radial-gradient(circle at center, #1a1a1a 0%, #0a0a0a 100%);" aria-labelledby="trainers-heading">
     <div class="container py-5">
         <div class="trainer-card-container" style="max-width: 900px; margin: 0 auto; background: #1a1a1a; border-radius: 1.2rem; box-shadow: 0 8px 32px rgba(46, 204, 113, 0.15); padding: 40px 32px; transition: transform 0.3s ease, box-shadow 0.3s ease; animation: fadeIn 0.8s ease-out;">
