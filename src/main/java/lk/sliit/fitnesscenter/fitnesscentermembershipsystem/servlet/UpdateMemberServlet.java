@@ -24,7 +24,7 @@ public class UpdateMemberServlet extends HttpServlet {
         String membershipType = request.getParameter("membershipType");
         String contactNumber = request.getParameter("contactNumber");
 
-        // Get the existing member to preserve the lastRenewalDate
+        //Searches for the current member using their ID
         Member existingMember = memberManager.getAllMembers().stream()
                 .filter(m -> m.getMemberId().equals(memberId))
                 .findFirst()

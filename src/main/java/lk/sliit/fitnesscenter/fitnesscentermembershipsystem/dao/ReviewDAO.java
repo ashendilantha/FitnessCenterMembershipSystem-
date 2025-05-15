@@ -15,18 +15,22 @@ public class ReviewDAO {
     private static final String HEADER = "memberId|rating|comment|reviewDate";
     private static int lastId = 0;
 
+
+
     // Create a new review
     public void addReview(Review review) {
-        List<Review> reviews = getAllReviews();
-        review.setReviewId(++lastId);
+        List<Review> reviews = getAllReviews(); // Load all existing reviews
+        review.setReviewId(++lastId); // Assign a new unique review ID
         review.setReviewDate(LocalDate.now());
-        reviews.add(review);
-        saveReviews(reviews);
+        reviews.add(review); //Add new reviews
+        saveReviews(reviews); // Save all reviews back to the file
     }
 
-    // Get all reviews
+
+    // Get all reviews(Read)
     public List<Review> getAllReviews() {
         List<Review> reviews = new ArrayList<>();
+        // Return empty list if file doesn't exist
         if (!Files.exists(Paths.get(FILE_PATH))) {
             return reviews;
         }
@@ -36,15 +40,17 @@ public class ReviewDAO {
             reader.readLine();
 
             String line;
+            // Read each review line from the file
             while ((line = reader.readLine()) != null) {
-                if (!line.trim().isEmpty()) {
+                if (!line.trim().isEmpty()) { // Ignore empty lines
                     Review review = parseReview(line);
                     if (review != null) {
-                        reviews.add(review);
+                        reviews.add(review); // Add valid review to the list
                     }
                 }
             }
 
+            // Update lastId to the latest review ID
             if (!reviews.isEmpty()) {
                 lastId = reviews.get(reviews.size() - 1).getReviewId();
             }
@@ -53,6 +59,10 @@ public class ReviewDAO {
         }
         return reviews;
     }
+
+
+
+
 
     private Review parseReview(String line) {
         try {
@@ -73,6 +83,13 @@ public class ReviewDAO {
             return null;
         }
     }
+
+
+
+
+
+
+
 
     // Save all reviews to text file
     private void saveReviews(List<Review> reviews) {
@@ -124,28 +141,45 @@ public class ReviewDAO {
         return filtered;
     }
 
-    // Update a review
+
+
+
+
+
+    // Update a review(Update)
     public boolean updateReview(Review updatedReview) {
         List<Review> reviews = getAllReviews();
+        // Find the review with the matching ID
         for (int i = 0; i < reviews.size(); i++) {
             if (reviews.get(i).getReviewId() == updatedReview.getReviewId()) {
-                reviews.set(i, updatedReview);
-                saveReviews(reviews);
+                reviews.set(i, updatedReview); // Update the review
+                saveReviews(reviews);   // Save all reviews back to file
                 return true;
             }
         }
-        return false;
+        return false; // No matching review found
     }
 
-    // Delete a review
+
+
+
+
+
+    // Delete a review(Delete)
     public boolean deleteReview(int reviewId) {
-        List<Review> reviews = getAllReviews();
+        List<Review> reviews = getAllReviews();  // Load all reviews
+
+        // Remove review(s) with the matching ID
         boolean removed = reviews.removeIf(review -> review.getReviewId() == reviewId);
         if (removed) {
-            saveReviews(reviews);
+            saveReviews(reviews); //save the updated list
         }
         return removed;
     }
+
+
+
+
 
     // Queue for membership renewal requests
     private final Queue<Integer> renewalQueue = new LinkedList<>();

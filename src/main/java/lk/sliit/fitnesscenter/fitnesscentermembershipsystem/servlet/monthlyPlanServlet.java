@@ -37,6 +37,9 @@ public class monthlyPlanServlet extends HttpServlet {
         }
     }
 
+
+
+    //Add plans (Create)
     private void addMonthlyplan(HttpServletRequest request, HttpServletResponse response) throws IOException {
         String id = request.getParameter("planId");
         String name = request.getParameter("planName");
@@ -53,13 +56,19 @@ public class monthlyPlanServlet extends HttpServlet {
         response.sendRedirect("Monthly-plan-admin.jsp");
     }
 
+
+
+
+
+    //Delete plans (Delete)
     private void deleteMonthlyplan(HttpServletRequest request, HttpServletResponse response) throws IOException {
-        String idToDelete = request.getParameter("planId");
+        String idToDelete = request.getParameter("planId"); //Retrieves the plan ID
         File inputFile = new File(planDAO.getDataFilePath());
         File tempFile = new File(planDAO.getDirectoryPath() + "\\temp_monthly-plan.txt");
 
         List<String> lines = new ArrayList<>();
 
+        //Read the file
         try(BufferedReader reader = new BufferedReader(new FileReader(inputFile))) {
             String line;
             while((line = reader.readLine()) != null) {
@@ -69,6 +78,7 @@ public class monthlyPlanServlet extends HttpServlet {
             }
         }
 
+        // Write Filtered Data to Temp File
         try(BufferedWriter writer = new BufferedWriter(new FileWriter(tempFile))) {
             for(String line : lines) {
                 writer.write(line);
@@ -81,6 +91,11 @@ public class monthlyPlanServlet extends HttpServlet {
         response.sendRedirect("Monthly-plan-admin.jsp");
     }
 
+
+
+
+
+    //Update plans (Update)
     private void updateMonthlyplan(HttpServletRequest request, HttpServletResponse response) throws IOException {
         String originalID = request.getParameter("originalID");
         String id = request.getParameter("planId");

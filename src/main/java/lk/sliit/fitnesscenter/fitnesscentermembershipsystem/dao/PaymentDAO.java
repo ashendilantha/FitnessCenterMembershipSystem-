@@ -28,10 +28,10 @@ public class PaymentDAO {
         }
     }
 
-    // Create operation
+    // Create operation(Create)
     public boolean createPayment(Payment payment) {
-        paymentQueue.add(payment);
-        processQueue();
+        paymentQueue.add(payment); // Add the new payment to the queue
+        processQueue();            // Process all payments in the queue
         return true;
     }
 
@@ -39,7 +39,7 @@ public class PaymentDAO {
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(FILE_PATH, true))) {
             while (!paymentQueue.isEmpty()) {
                 Payment payment = paymentQueue.poll();
-                writer.write(payment.toString());
+                writer.write(payment.toString());   // Write payment data
                 writer.newLine();
             }
         } catch (IOException e) {
@@ -47,13 +47,21 @@ public class PaymentDAO {
         }
     }
 
-    // Read operation
+
+
+
+
+    // Read operation(Read)
     public List<Payment> getAllPayments() {
         List<Payment> payments = new ArrayList<>();
         try (BufferedReader reader = new BufferedReader(new FileReader(FILE_PATH))) {
             String line;
+
+            // Read each payment record line by line
             while ((line = reader.readLine()) != null) {
                 String[] data = line.split(",");
+
+                // Create a Payment object from the parsed data
                 Payment payment = new Payment(
                         Integer.parseInt(data[0]),
                         Integer.parseInt(data[1]),
@@ -64,45 +72,49 @@ public class PaymentDAO {
                         data[6],
                         data[7]
                 );
-                payments.add(payment);
+                payments.add(payment); // Add payment to the list
             }
         } catch (IOException e) {
-            e.printStackTrace();
+            e.printStackTrace(); // Error handling
         }
         return payments;
     }
 
-    // Update operation
-    public boolean updatePayment(Payment updatedPayment) {
-        List<Payment> payments = getAllPayments();
-        boolean found = false;
 
-        for (int i = 0; i < payments.size(); i++) {
-            if (payments.get(i).getPaymentId() == updatedPayment.getPaymentId()) {
-                payments.set(i, updatedPayment);
-                found = true;
-                break;
-            }
-        }
 
-        if (found) {
-            rewriteFile(payments);
-            return true;
-        }
-        return false;
-    }
 
-    // Delete operation
-    public boolean deletePayment(int paymentId) {
-        List<Payment> payments = getAllPayments();
-        boolean removed = payments.removeIf(p -> p.getPaymentId() == paymentId);
 
-        if (removed) {
-            rewriteFile(payments);
-            return true;
-        }
-        return false;
-    }
+//    // Update operation(Update)
+//    public boolean updatePayment(Payment updatedPayment) {
+//        List<Payment> payments = getAllPayments();
+//        boolean found = false;
+//
+//        for (int i = 0; i < payments.size(); i++) {
+//            if (payments.get(i).getPaymentId() == updatedPayment.getPaymentId()) {
+//                payments.set(i, updatedPayment);
+//                found = true;
+//                break;
+//            }
+//        }
+//
+//        if (found) {
+//            rewriteFile(payments);
+//            return true;
+//        }
+//        return false;
+//    }
+
+//    // Delete operation(Delete)
+//    public boolean deletePayment(int paymentId) {
+//        List<Payment> payments = getAllPayments();
+//        boolean removed = payments.removeIf(p -> p.getPaymentId() == paymentId);
+//
+//        if (removed) {
+//            rewriteFile(payments);
+//            return true;
+//        }
+//        return false;
+//    }
 
     private void rewriteFile(List<Payment> payments) {
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(FILE_PATH))) {

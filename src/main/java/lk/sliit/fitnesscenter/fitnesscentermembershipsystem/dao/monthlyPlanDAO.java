@@ -23,52 +23,76 @@ public class monthlyPlanDAO {
         }
     }
 
+
+
+
+    // Add monthly plan to an ArrayList(Create)
     public void addMonthlyplan(monthlyPlans monthlyPlan) {
         monthlyPlanList.add(monthlyPlan);
         savemonthlyPlanFile(monthlyPlan);
     }
 
     private void savemonthlyPlanFile(monthlyPlans monthlyPlan) {
+        //Adds a new plan to the file
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(DATA_FILE, true))) {
+
+            //Write plan details
             writer.write(monthlyPlan.getPlanId() + "," + monthlyPlan.getPlanName() + "," +
                     monthlyPlan.getPrice() + "," + monthlyPlan.getNotes());
+            //Move next Line
             writer.newLine();
         } catch (IOException e) {
-            e.printStackTrace();
+            e.printStackTrace(); //Error handling
         }
     }
 
+
+
+    //Read monthly plans from the file (Read)
     private void loadMonthlyPlans() {
         File file = new File(DATA_FILE);
-        if (!file.exists()) return;
+        if (!file.exists()) return; //Exit if file doesn't exist
 
         try(BufferedReader reader = new BufferedReader(new FileReader(DATA_FILE))) {
             String line;
+            //Read file line by line
             while ((line = reader.readLine()) != null) {
                 String[] data = line.split(",");
                 if(data.length == 4) {
+                    //Create a new monthly plan object and add it to the list
                     monthlyPlans plan = new monthlyPlans(data[0], data[1], data[2], data[3]);
                     monthlyPlanList.add(plan);
                 }
             }
         } catch (IOException e) {
-            e.printStackTrace();
+            e.printStackTrace(); //Error handling
         }
     }
 
-    public List<monthlyPlans> getMonthlyPlans() {
-        return monthlyPlanList;
-    }
 
+//    public List<monthlyPlans> getMonthlyPlans() {
+//        return monthlyPlanList;
+//    }
+
+
+
+
+
+
+    //Update monthly plan (Update)
     public void updateMonthlyplan(String originalID, monthlyPlans UpdatedMonthlyPlan) {
         for (int i = 0; i < monthlyPlanList.size(); i++) {
+            //Check if current plan ID matches the original ID
             if(monthlyPlanList.get(i).getPlanId().equals(originalID)) {
+                //Replace updated plan
                 monthlyPlanList.set(i, UpdatedMonthlyPlan);
                 saveAllmonthlyPlans();
                 break;
             }
         }
     }
+
+    //Delete plans contains in the monthlyPlanServlet file
 
     private void saveAllmonthlyPlans() {
         try(BufferedWriter writer = new BufferedWriter(new FileWriter(DATA_FILE))) {

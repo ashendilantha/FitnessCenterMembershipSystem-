@@ -17,6 +17,7 @@ public class Member {
     // Default constructor
     public Member(String memberId, String name, String email, String password, String membershipType, String contactNumber, LocalDate lastRenewalDate) {
         this.memberId = (memberId == null || memberId.isEmpty()) ? UUID.randomUUID().toString() : memberId;
+//        this.memberId = UUID.randomUUID().toString();
         this.name = name;
         this.email = email;
         this.password = password;
